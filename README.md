@@ -1,4 +1,4 @@
-# motoblok site
+# motoblok sit
 
 Чтобы установить gulp должен быть установлен node.js
 
