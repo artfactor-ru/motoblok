@@ -1,0 +1,369 @@
+.footer {
+    @include block-style2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include laptop {
+        background-attachment: fixed;
+    }
+}
+
+.footer__wrap {
+    @include tablets {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+}
+
+.footer__nav {
+    @include tablets {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    @include laptop {
+        width: 75%;
+    }
+}
+
+.footer__nav-column {
+    @include tablets {
+        width: 48%;
+    }
+    @include laptop {
+        width: 47%
+    }
+}
+
+.footer__list {
+    @include list-destroy;
+    margin-bottom: 20px;
+}
+
+.footer__list li {
+    margin-bottom: 10px;
+    @include laptop {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 15px;
+    }
+    @include desktop {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.footer__list .footer__item-main {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-yellow;
+    transition: $transition-speed;
+    @include laptop {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    @include desktop {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    & a:hover {
+        color: $color-light-grey !important;
+    }
+}
+
+.footer__list a {
+    color: inherit;
+    opacity: 1;
+    &:hover {
+        opacity: 1;
+        color: $color-yellow;
+    }
+}
+
+.footer__info-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    @include laptop {
+        width: 25%;
+        // flex-direction: column;
+    }
+}
+
+.footer__info {
+    width: 100%;
+    @include tablets {
+        margin-top: 30px;
+        width: 48%;
+    }
+    @include laptop {
+        width: 100%;
+        margin-top: 0;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+.footer__logo {
+    & img {
+        max-width: 270px;
+        @include desktop {
+            max-width: 325px;
+        }
+    }
+}
+
+.footer__slogan {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    // text-align: center;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    & span {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0;
+    }
+    @include laptop {
+        text-align: right;
+    }
+    @include desktop {
+        font-size: 23px;
+        line-height: 28px;
+        & span {
+            font-size: 23px;
+            line-height: 28px;
+        }
+    }
+}
+
+.footer__licenses {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 30px;
+    @include laptop {
+        text-align: right;
+    }
+    &:hover {
+        opacity: 1;
+        color: $color-yellow;
+    }
+}
+
+.footer .button {
+    display: block;
+    max-width: 250px;
+    @include laptop {
+        padding: 10px 40px;
+    }
+}
+
+.footer__contact {
+    width: 100%;
+    @include tablets {
+        width: 48%;
+    }
+    @include laptop {
+        width: 100%;
+        margin-top: 30px
+    }
+}
+
+.footer__contact-list {
+    @include list-destroy;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 5px;
+    }
+    @include laptop {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.footer__contact-item {
+    margin-bottom: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include tablets {
+        align-items: flex-end;
+        text-align: right;
+    }
+    @include laptop {
+        align-items: center;
+    }
+}
+
+.footer__contact-item p {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.footer__contact-item p:not(:nth-child(2)) {
+    padding-bottom: 5px;
+}
+
+.footer__contact-item a {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    @include desktop {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    &:hover {
+        opacity: 1;
+        color: $color-yellow;
+    }
+}
+
+.footer__contact-item::after {
+    content: "";
+    // position: absolute;
+    position: relative;
+    right: 0;
+    width: 30px;
+    display: inline-block;
+    height: 45px;
+    top: 0;
+    margin-left: 10px;
+    // background-size: contain;
+    background-repeat: no-repeat;
+    @include desktop {
+        margin-left: 50px;
+    }
+}
+
+.footer__contact-item--adress::after {
+    background-image: url(../img/icon/pin.png);
+}
+
+.footer__contact-item--phone::after {
+    background-image: url(../img/icon/tel.png);
+    width: 28px;
+    height: 38px;
+    background-size: 28px 38px;
+}
+
+.footer__contact-item--time::after {
+    background-image: url(../img/icon/time.svg);
+    width: 39px;
+    height: 35px;
+    background-size: 39px 35px;
+}
+
+.footer .social__list {
+    @include tablets {
+        justify-content: flex-end;
+    }
+    & svg path {
+        fill: $color-yellow;
+    }
+    & svg circle {
+        stroke: $color-yellow;
+    }
+}
+
+.footer__copiright {
+    margin-top: 25px;
+    @include laptop {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    & a:hover {
+        color: $color-light-grey;
+    }
+}
+
+.footer__copiright div {
+    @include laptop {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer__copiright p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 10px;
+}
+
+.footer__copiright a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-yellow;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.footer__bottomnav {
+    display: none;
+    @include laptop {
+        display: block;
+        width: 80%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    @include desktop {
+        width: 66%;
+    }
+}
+
+.footer__bottomnav-list {
+    @include list-destroy;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.footer__bottomnav-list a {
+    color: inherit;
+    &:hover {
+        opacity: 1;
+        color: $color-yellow;
+    }
+}

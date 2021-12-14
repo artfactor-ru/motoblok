@@ -1,0 +1,274 @@
+.specialist {
+    h1 {
+        margin-bottom: 20px;
+
+        & br {
+            display: none;
+        }
+    }
+
+    &__wrap {
+        @include tablets {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @include laptop {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__description {
+        @include p-style;
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 25px;
+
+        @include tablets {
+            margin-bottom: 8px;
+        }
+
+        @include desktop {
+            font-size: 26px;
+            line-height: 36px;
+            padding-top: 10px;
+        }
+
+        & br {
+            display: none;
+        }
+    }
+
+    &__photo {
+        flex-shrink: 0;
+        margin-top: 40px;
+
+        @include tablets {
+            width: 33%;
+            order: 2;
+            margin-left: 40px;
+            max-height: 646px;
+        }
+
+        & img {
+            width: 100%;
+            object-fit: cover;
+            max-height: 100%;
+        }
+    }
+
+    p {
+        margin-bottom: 1em;
+    }
+
+    &__cite {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 25px;
+        margin-top: 40px;
+        font-size: 14px;
+        line-height: 20px;
+        border: 2px solid $color-yellow;
+        box-sizing: border-box;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../img/icon/right-quote.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            padding-left: 10px;
+            padding-right: 10px;
+            left: 10px;
+            top: -12px;
+            background-color: #fff;
+
+            @include laptop {
+                width: 35px;
+                height: 35px;
+                left: 15px;
+                top: -17px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../img/icon/left-quote.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            padding-left: 10px;
+            padding-right: 10px;
+            right: 10px;
+            bottom: -12px;
+            background-color: #fff;
+
+            @include laptop {
+                width: 35px;
+                height: 35px;
+                bottom: -17px;
+                right: 15px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        @include desktop {
+            padding: 30px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+
+    &__buttons {
+        padding-top: 30px;
+
+        @include laptop {
+            padding-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 20px;
+
+            @include laptop {
+                max-width: 48%;
+            }
+        }
+
+        .button--border {
+            margin-top: 20px;
+            border-color: #3A4047;
+            color: #3A4047;
+
+            svg {
+                transition: $transition-speed;
+            }
+
+            &:hover svg {
+                transform: translateX(-25px);
+            }
+
+            @include laptop {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.certificates {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @include laptop {
+        margin-bottom: 0;
+    }
+
+    & h3 {
+        margin-bottom: 30px;
+
+        // }
+        @include tablets {
+            margin-bottom: 40px;
+        }
+
+        @include laptop {
+            margin-bottom: 45px;
+        }
+    }
+
+    & .h3 {
+        margin-bottom: 30px;
+
+        // }
+        @include tablets {
+            margin-bottom: 40px;
+        }
+
+        @include laptop {
+            margin-bottom: 45px;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    .swiper-container {
+        height: 259px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+    }
+
+    & .swiper-slide {
+        max-width: 365px;
+        // width: auto !important;
+        height: 259px;
+
+        & a {
+            height: 100%;
+        }
+
+        & img {
+            width: auto;
+            height: 259px;
+            object-fit: cover;
+        }
+
+        // width: auto !important;
+    }
+}
+
+.spec {
+    &__row {
+        margin-bottom: 40px;
+
+        .button {
+            margin-top: 20px;
+
+            @include tablets {
+                margin-top: 0;
+            }
+        }
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include tablets {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+    }
+}
+
+.specialist--type2 .specialist__wrap {
+    padding-bottom: 30px;
+
+    @include laptop {
+        padding-bottom: 40px;
+    }
+}

@@ -1,0 +1,177 @@
+.price__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.price__article {
+    width: 100%;
+    margin-top: 20px;
+
+    @include tablets {
+        margin-top: 40px;
+        width: 65%;
+    }
+}
+
+.price__sidebar {
+    width: 100%;
+    margin-top: 20px;
+
+    @include tablets {
+        margin-top: 40px;
+        width: 30%;
+    }
+
+    & .button {
+        width: 100%;
+        box-sizing: border-box;
+
+        @include tablets {
+            width: auto;
+        }
+    }
+}
+
+.swiper-container--three-el__list {
+    @include list-destroy;
+}
+
+.swiper-container--three-el>h3 {
+    margin: 1em 0;
+}
+
+// Шапка с иконками
+.price__header {
+    border: 2px solid #E2D7B9;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+
+    @include tablets {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 60px;
+        margin-bottom: 40px;
+    }
+
+    &-desc {
+        & a {
+            color: $color-light-blue;
+        }
+    }
+}
+
+.price__header-list {
+    @include list-destroy;
+}
+
+.price__header-icon {
+    width: 50px;
+    display: inline-block;
+    background-color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+
+    @include tablets {
+        margin-right: 40px;
+    }
+}
+
+.price__header-item {
+    display: flex;
+    align-items: center;
+    margin-left: -25px;
+}
+
+.price__header-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+// Блок  с иконками берется из price-detail 
+.promo__header--price-pr {
+    margin-bottom: 30px;
+}
+
+.promo__header--price-pr::before {
+    display: none;
+}
+
+.promo__header--price-pr .promo__header-list {
+    margin-top: 55px;
+
+    @include laptop {
+        margin-top: 65px;
+    }
+}
+
+.promo__header--price-pr .promo__header-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    @include laptop {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.promo__header--price-pr .promo__header-item {
+    width: 100%;
+    margin-top: -60px;
+}
+
+.promo__header--price-pr .promo__header-desc {
+    font-size: 12px;
+    line-height: 16px;
+    @include list-destroy;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+
+    @include laptop {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+.promo__header--price-pr .promo__header-desc li:not(:last-child) {
+    margin-bottom: 10px;
+
+    @include tablets {
+        margin-bottom: 20px;
+    }
+}
+
+.promo__header--price-pr .promo__header-desc li a {
+    color: inherit;
+}
+
+.promo__header--price-pr .promo__header-desc li a:hover {
+    color: $color-light-grey;
+}
+
+// Акции
+.swiper-container--three-el h3 {
+    margin-bottom: 20px;
+
+    @include laptop {
+        margin-bottom: 0;
+    }
+}
+
+.swiper-container--three-el .swiper-container {
+    margin-top: 30px;
+
+    @include laptop {
+        margin-top: 0;
+    }
+}

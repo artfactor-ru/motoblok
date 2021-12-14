@@ -1,0 +1,118 @@
+.problems__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    @include laptop {
+        margin-top: 50px;
+    }
+}
+
+.problems {
+    @include list-destroy;
+    width: 100%;
+    @include tablets {
+        width: 48%;
+    }
+}
+
+.problems__desc {
+    width: 100%;
+    text-align: center;
+    @include laptop {
+        width: 48%;
+    }
+}
+
+.problems__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.problems__letter {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+    /* or 150% */
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 20px;
+    margin-right: 40px;
+    display: inline-block;
+}
+
+.problems--inner .problems__letter {
+    color: $color-light-grey;
+}
+
+.problems__item-list {
+    @include list-destroy;
+}
+
+.problems__item-el a {
+    font-size: 16px;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: normal;
+    /* or 222% */
+    color: #FFFFFF;
+    display: inline-block;
+    margin-bottom: 12px;
+    @include laptop {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    transition: $transition-speed;
+    &:hover {
+        color: $color-yellow;
+    }
+}
+
+.problems--inner .problems__item-el a {
+    color: $color-light-blue;
+    &:hover {
+        color: $color-light-grey;
+    }
+}
+
+.problems__desc p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+    @include laptop {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-size: 24px;
+        line-height: 35px;
+    }
+}
+
+.problems__desc .button {
+    display: block;
+    margin-top: 0px;
+    @include tablets {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        box-sizing: border-box;
+        width: 365px;
+    }
+}
+
+.problems__btn {
+    @include tablets {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+}
+
+.problems__desc img {
+    width: 100%;
+}

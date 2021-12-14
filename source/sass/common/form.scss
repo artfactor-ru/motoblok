@@ -1,0 +1,366 @@
+// .form {
+//     @include block-style;
+//     padding-bottom: 50px;
+//     color: #292929;
+//     position: relative;
+//     box-sizing: border-box;
+//     @include tablets {
+//         text-align: center;
+//         padding-bottom: 60px;
+//     }
+//     @include laptop {
+//         padding-bottom: 70px;
+//     }
+// }
+// h5 {
+//     margin-top: 0;
+// }
+// .form form {
+//     position: relative;
+// }
+// .form h4 {
+//     text-align: center;
+//     margin-bottom: 30px;
+//     color: #266DA4;
+// }
+// .error {
+//     margin-bottom: 20px;
+// }
+// .error p {
+//     font-size: 12px;
+//     line-height: 14px;
+//     text-align: left;
+// }
+// .form fieldset,
+// .thank {
+//     box-sizing: border-box;
+//     border: none;
+//     background: #DBE3EB;
+//     padding: 15px;
+//     opacity: 0;
+//     top: 0;
+//     width: 100%;
+//     left: 0;
+//     position: absolute;
+//     transition: all 0.5s ease;
+//     pointer-events: none;
+//     @include tablets {
+//         padding: 25px;
+//     }
+//     @include laptop {
+//         padding: 35px;
+//     }
+//     @include desktop {
+//         padding: 55px;
+//     }
+//     &.current {
+//         opacity: 1;
+//         position: static;
+//         pointer-events: auto;
+//     }
+// }
+// .form fieldset>.form__wrap {
+//     justify-content: space-between;
+// }
+// .thank {
+//     min-height: 400px;
+//     color: $color-green;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+// .form__wrap {
+//     display: flex;
+//     flex-direction: column;
+//     @include tablets {
+//         flex-direction: row;
+//         flex-wrap: wrap;
+//         flex-grow: 1;
+//         // justify-content: space-between;
+//     }
+// }
+// .form__column {
+//     display: flex;
+//     width: 100%;
+//     box-sizing: border-box;
+//     flex-direction: column;
+//     @include tablets {
+//         width: 48%;
+//     }
+// }
+// .form__column--wide {
+//     width: 100%;
+//     max-width: 1000px;
+//     margin: 0 auto;
+// }
+// .form_group {
+//     display: flex;
+// }
+// .form__column>label {
+//     display: flex;
+//     width: 100%;
+//     box-sizing: border-box;
+//     flex-direction: column;
+//     margin-bottom: 20px;
+//     font-size: 14px;
+//     // font-weight: bold;
+//     @include tablets {
+//         flex-direction: row;
+//         align-items: center;
+//         margin-bottom: 30px;
+//     }
+// }
+// .form__column>label span {
+//     font-weight: bold;
+// }
+// .form .required {
+//     color: red;
+//     font-weight: normal;
+// }
+// .form label span {
+//     width: auto;
+//     margin-bottom: 5px;
+//     @include tablets {
+//         width: 25%;
+//         text-align: right;
+//         margin-bottom: 0px;
+//     }
+// }
+// .form label input,
+// .form label textarea {
+//     font-family: inherit;
+//     flex-grow: 1;
+//     outline: none;
+//     padding: 6px 12px;
+//     font-size: 14px;
+//     line-height: 1.42857143;
+//     color: #555;
+//     background-color: #fff;
+//     background-image: none;
+//     resize: none;
+//     max-width: 100%;
+//     min-width: 100%;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     // box-shadow: inset 0 1px 1px rgb(0 0 0 8%);
+//     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+//     box-sizing: border-box;
+//     @include tablets {
+//         margin-left: 15px;
+//     }
+// }
+// .form__modal input,
+// .form__modal textarea {
+//     font-family: inherit;
+//     outline: none;
+//     padding: 10px 12px;
+//     font-size: 14px;
+//     line-height: 20px;
+//     color: #555;
+//     resize: none;
+//     max-width: 100%;
+//     min-width: 100%;
+//     background-color: #fff;
+//     background-image: none;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     // box-shadow: inset 0 1px 1px rgb(0 0 0 8%);
+//     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+//     box-sizing: border-box;
+//     margin-bottom: 20px;
+// }
+// .form__modal input::placeholder,
+// .form__modal textarea::placeholder {
+//     font-size: 14px;
+//     line-height: 20px;
+// }
+// .form__modal input:focus,
+// .form__modal textarea:focus {
+//     border-color: #C4C4C4;
+// }
+// .form label input:focus,
+// .form label textarea:focus {
+//     border-color: #C4C4C4;
+// }
+// .form label input:focus:invalid,
+// .form label textarea:focus:invalid {
+//     border-color: #de4145;
+// }
+// .form__modal input:focus:invalid,
+// .form__modal textarea:focus:invalid {
+//     border-color: #de4145;
+// }
+// .form label input:focus:valid,
+// .form label textarea:focus:valid {
+//     border-color: $color-green;
+// }
+// .form__modal input:focus:valid,
+// .form__modal textarea:focus:valid {
+//     border-color: $color-green;
+// }
+// .form i {
+//     @include laptop {
+//         display: inline-block;
+//     }
+//     color: $color-green;
+//     display: none;
+//     font-size: 33px;
+//     margin-left: 15px;
+//     // width: 16%;
+//     width: 30px;
+//     text-align: center;
+// }
+// .form button {
+//     margin-top: 20px;
+// }
+// .steps {
+//     flex-direction: column;
+//     @include tablets {
+//         flex-direction: row;
+//         justify-content: space-between
+//     }
+//     @include list-destroy;
+//     display: flex;
+//     margin-bottom: 30px;
+//     border: 1px solid #DBE3EB;
+//     padding: 10px;
+// }
+// .steps__item {
+//     width: 100%;
+//     text-align: center;
+//     cursor: not-allowed;
+//     transition: background-color 0.5s ease;
+//     @include tablets {
+//         width: 20%;
+//     }
+//     box-sizing: border-box;
+//     padding: 10px;
+// }
+// .steps__item h4 {
+//     margin-bottom: 10px;
+// }
+// .steps__item.current {
+//     background-color: $color-green;
+//     color: #fff;
+//     cursor: pointer;
+// }
+// .steps__item.active {
+//     cursor: pointer;
+// }
+// .steps__item.active:not(.current):hover {
+//     background-color: #dbe3eb;
+// }
+// .steps__item.current h4 {
+//     color: #fff;
+// }
+// .steps__item.current p {
+//     color: #fff;
+// }
+// input[type='radio']:after {
+//     width: 15px;
+//     height: 15px;
+//     border-radius: 15px;
+//     top: -2px;
+//     left: -1px;
+//     position: relative;
+//     background-color: #d1d3d1;
+//     content: '';
+//     display: inline-block;
+//     visibility: visible;
+//     border: 2px solid white;
+// }
+// input[type='radio']:checked:after {
+//     width: 15px;
+//     height: 15px;
+//     border-radius: 15px;
+//     top: -2px;
+//     left: -1px;
+//     position: relative;
+//     background-color: $color-green;
+//     content: '';
+//     display: inline-block;
+//     visibility: visible;
+//     border: 2px solid white;
+// }
+// input[type='checkbox']:after {
+//     width: 15px;
+//     height: 15px;
+//     // border-radius: 15px;
+//     top: -2px;
+//     left: -1px;
+//     position: relative;
+//     background-color: #d1d3d1;
+//     content: '';
+//     display: inline-block;
+//     visibility: visible;
+//     border: 2px solid white;
+// }
+// input[type='checkbox']:checked:after {
+//     width: 15px;
+//     height: 15px;
+//     // border-radius: 15px;
+//     top: -2px;
+//     left: -1px;
+//     position: relative;
+//     background-color: $color-green;
+//     content: '';
+//     display: inline-block;
+//     visibility: visible;
+//     border: 2px solid white;
+// }
+// .form__checkgroup {
+//     margin-bottom: 10px;
+//     text-align: left;
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+// }
+// .form .form__checkgroup input {
+//     flex-grow: 0;
+// }
+// .form__checkgroup label {
+//     margin-left: 15px;
+//     display: inline-flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     flex-grow: 1;
+//     max-width: 450px;
+//     box-sizing: border-box;
+//     background-color: #fff;
+//     background-image: none;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     min-height: 35px;
+// }
+// .form__checkwrap {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     align-items: center;
+//     flex-grow: 1;
+// }
+// .form__checkwrap label>i {
+//     width: auto;
+// }
+// .form .button i {
+//     line-height: 14px;
+//     font-size: 14px;
+//     width: auto;
+//     margin-right: 5px;
+//     margin-left: 0;
+//     color: #fff;
+// }
+// .form .button:hover i {
+//     color: $color-green;
+// }
+// .form__checkwrap--img {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+// }
+// .form__checkwrap--img .form__checkgroup {
+//     width: auto;
+//     max-width: 300px;
+// }

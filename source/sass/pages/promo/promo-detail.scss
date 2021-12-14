@@ -1,0 +1,143 @@
+.promo__header {
+    text-align: center;
+
+    @include laptop {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+
+}
+
+.promo__header::before {
+    @include laptop {
+        content: "";
+        position: absolute;
+        width: 285px;
+        height: 195px;
+        background-image: url(../img/logo-transp.svg);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 100%;
+        left: 2px;
+        bottom: 17px;
+        z-index: 1000;
+        // background-color: #ffffff;
+    }
+
+    @include desktop {
+        bottom: 17px;
+    }
+}
+
+.promo__header-list {
+    @include list-destroy;
+    border: 2px solid #E2D7B9;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 25px;
+    margin-top: 45px;
+    z-index: 2;
+
+    @include tablets {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    @include laptop {
+        justify-content: center;
+        margin-top: 85px;
+    }
+}
+
+.promo__header-item {
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include tablets {
+        width: 33%;
+        margin-bottom: 0;
+        margin-top: -60px;
+    }
+
+    @include laptop {
+        margin-bottom: 25px;
+        width: 25%;
+    }
+}
+
+.promo__header-icon {
+    display: inline-block;
+    background-color: #ffffff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.promo__header-icon svg {
+    width: 45px;
+    height: 45px;
+
+    @include laptop {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.promo__header-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    margin-top: 10px;
+
+    @include laptop {
+        font-size: 22px;
+        line-height: 30px;
+        margin-top: 35px;
+    }
+}
+
+.promo__header-desc {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-light-blue;
+
+    @include laptop {
+        font-size: 26px;
+        line-height: 30px;
+        margin-top: 10px;
+        // white-space: nowrap;
+    }
+}
+
+.button--promo {
+    position: relative;
+    z-index: 3;
+    transform: translateY(-20px);
+
+    @include laptop {
+        transform: translateY(-25px);
+    }
+}
+
+.promo__sliderwrap {
+    position: relative;
+}
+
+.swiper-centered-wrapper--promo .news__item {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.promo__row {
+    position: relative;
+    margin-bottom: 40px;
+}

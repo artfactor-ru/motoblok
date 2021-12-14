@@ -1,0 +1,1014 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-family: $font-main;
+    color: #fff;
+    overflow-x: hidden;
+    @include p-style;
+    text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+
+a {
+    // color: inherit;
+    text-decoration: none;
+    transition: $transition-speed;
+}
+
+// a:hover {
+//     opacity: 0.5;
+// }
+p a {
+    color: $color-yellow;
+    // text-decoration: underline;
+}
+
+p a:hover {
+    color: $color-light-grey;
+}
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 30px;
+    position: relative;
+
+    @include tablets {
+        padding: 0px 40px;
+    }
+
+    @include laptop {
+        padding: 0px 45px;
+    }
+
+    @include desktop {
+        margin: 0 auto;
+        padding: 0 50px;
+        max-width: 1680px;
+    }
+}
+
+h3 {
+    @include h3-style;
+}
+
+.h3 {
+    @include h3-style;
+}
+
+h2 {
+    @include h2-style;
+}
+
+.h2 {
+    @include h2-style;
+}
+
+p {
+    @include p-style;
+}
+
+// Анимация
+.animated {
+    display: block;
+}
+
+.animated--preloader {
+    display: block;
+}
+
+.simplefade {
+    display: block;
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+    transition: opacity 2s cubic-bezier(0.15, 0.64, 0.64, 0.93), transform 2s cubic-bezier(0.15, 0.64, 0.64, 0.93);
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 2s cubic-bezier(0.15, 0.64, 0.64, 0.93) !important;
+}
+
+.anitrigger.fade {
+    opacity: 1 !important;
+}
+
+.anitrigger.simplefade {
+    opacity: 1 !important;
+    -webkit-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
+}
+
+.swiper-slide-active .simplefade {
+    opacity: 1 !important;
+    -webkit-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
+}
+
+.swiper-slide-active .fade {
+    opacity: 1 !important;
+}
+
+// Анимация
+// Цвета блоков 
+.block-dark {
+    background: $color-grey;
+    color: $color-yellow;
+
+    & p {
+        color: #fff;
+    }
+}
+
+.block-light {
+    background: #ffffff;
+    color: $color-grey;
+}
+
+.block-light-grey {
+    background: $color-light-grey;
+    color: $color-grey;
+}
+
+// Цвета блоков 
+// Кнопка вверх
+.btn-up--flow {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    display: flex;
+    box-sizing: content-box;
+    align-items: center;
+    justify-content: center;
+    background: $color-grey;
+    z-index: 200;
+
+    @include laptop {
+        right: 45px;
+    }
+
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    & svg {
+        transition: $transition-speed;
+    }
+
+    &:hover svg {
+        transform: translateY(-5px) scaleY(1.05);
+    }
+}
+
+// Ссылка далеее
+.link-more {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: inherit;
+    transition: $transition-speed;
+    position: relative;
+    margin-top: 20px;
+
+    @include tablets {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 65px;
+        justify-content: flex-end;
+    }
+
+    @include laptop {
+        font-size: 24px;
+        line-height: 24px;
+        margin-top: 90px;
+    }
+
+    @include desktop {
+        font-size: 24px;
+        line-height: 24px;
+        margin-top: 90px;
+    }
+
+    & svg {
+        margin-left: 10px;
+        width: 21px;
+        height: 14px;
+        transition: $transition-speed;
+
+        @include laptop {
+            width: 30px;
+            height: 20px;
+        }
+
+        @include desktop {}
+
+        & path {
+            transition: $transition-speed;
+        }
+    }
+
+    &:hover svg {
+        transform: scaleX(1.5) translateX(5px);
+    }
+}
+
+.block-light-grey .link-more:hover {
+    color: #ffffff;
+
+    & svg path {
+        fill: #ffffff;
+    }
+}
+
+.block-dark .link-more:hover {
+    color: $color-light-grey;
+
+    & svg path {
+        fill: $color-light-grey;
+    }
+}
+
+// Ссылка далеее
+.link-more--small {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: inherit;
+    transition: $transition;
+    position: relative;
+    margin-top: 20px;
+
+    @include tablets {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 25px;
+        // justify-content: flex-end;
+    }
+
+    @include laptop {
+        font-size: 24px;
+        line-height: 24px;
+        margin-top: 90px;
+    }
+
+    @include desktop {
+        font-size: 24px;
+        line-height: 24px;
+        margin-top: 90px;
+    }
+
+    & svg {
+        margin-left: 10px;
+        width: 14px;
+        height: 9px;
+        transition: $transition-speed;
+
+        @include laptop {
+            width: 30px;
+            height: 20px;
+        }
+
+        @include desktop {}
+    }
+
+    & path {
+        transition: $transition-speed;
+    }
+
+    &:hover svg {
+        transform: scaleX(1.5) translateX(5px);
+    }
+}
+
+.block-light-grey .link-more--small:hover {
+    color: #ffffff;
+
+    & svg path {
+        fill: #ffffff;
+    }
+}
+
+.block-dark .link-more--small:hover {
+    color: $color-light-grey;
+
+    & svg path {
+        fill: $color-light-grey;
+    }
+}
+
+.link-back {
+    display: inline-flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: $color-grey;
+    transition: $transition;
+    position: relative;
+    margin-top: 30px;
+
+    @include tablets {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 35px;
+        margin-bottom: 45px;
+        // justify-content: flex-end;
+    }
+
+    @include laptop {
+        font-size: 24px;
+        line-height: 24px;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        color: $color-light-grey;
+    }
+
+    & svg {
+        margin-right: 10px;
+        width: 21px;
+        height: 14px;
+        transition: $transition-speed;
+
+        @include tablets {
+            width: 30px;
+            height: 20px;
+        }
+
+        @include laptop {
+            width: 30px;
+            height: 20px;
+        }
+
+        @include desktop {}
+
+        & path {
+            transition: $transition-speed;
+        }
+    }
+
+    &:hover svg {
+        transform: scaleX(1.1) translateX(-6px);
+    }
+
+    &:hover svg path {
+        fill: $color-light-grey;
+    }
+}
+
+// Центрируемый слайдер
+.swiper-container--centered {
+    height: auto !important;
+    position: relative;
+}
+
+.swiper-container--centered .swiper-wrapper {
+    @include tablets {
+        height: auto !important;
+    }
+}
+
+.swiper-centered-wrapper {
+    position: relative;
+}
+
+.swiper-centered-wrapper--inside {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.swiper-centered-wrapper .swiper-button-prev {
+    left: 0;
+
+    @include tablets {
+        left: -30px;
+    }
+
+    @include laptop {
+        left: -30px;
+    }
+
+    @include desktop {
+        left: -40px;
+    }
+}
+
+.swiper-centered-wrapper .swiper-button-next {
+    right: 0;
+
+    @include tablets {
+        right: -30px;
+    }
+
+    @include laptop {
+        right: -30px;
+    }
+
+    @include desktop {
+        right: -40px;
+    }
+}
+
+.swiper-centered-wrapper .swiper-button-next,
+.swiper-centered-wrapper .swiper-button-prev {
+    color: inherit;
+    transition: $transition-speed;
+}
+
+.swiper-centered-wrapper .swiper-button-next:hover {
+    transform: translateX(5px);
+}
+
+.swiper-centered-wrapper .swiper-button-prev:hover {
+    transform: translateX(-5px);
+}
+
+.swiper-centered-wrapper .swiper-button-next::after,
+.swiper-centered-wrapper .swiper-button-prev::after {
+    font-size: 23px;
+    font-weight: bold;
+
+    @include laptop {
+        font-size: 30px;
+    }
+}
+
+.swiper-container--centered .swiper-slide h3 {
+    opacity: 0;
+}
+
+.swiper-container--centered .swiper-slide-active h3 {
+    opacity: 1;
+    transition: $transition;
+}
+
+.swiper-container--centered .swiper-slide {
+    width: 100%;
+    height: 184px;
+
+    // pointer-events: none;
+    @include tablets {
+        width: 456px !important;
+        height: 262px !important;
+    }
+
+    @include laptop {
+        width: 45% !important;
+        height: 332px !important;
+    }
+
+    @include desktop {
+        width: 730px !important;
+        height: 420px !important;
+    }
+}
+
+// Конец центрируемого слайдера
+// простой слайдер как в акциях и на дет странице специалиста
+// .swiper-centered-wrapper--promo .swiper-wrapper {
+//     transition: $transition-slider !important;
+// }
+.swiper-centered-wrapper--promo {
+    margin-top: 30px;
+
+    @include laptop {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+}
+
+.swiper-centered-wrapper--promo .swiper-button-prev {
+    left: -25px;
+
+    @include tablets {
+        left: -30px;
+    }
+
+    @include laptop {
+        left: -30px;
+    }
+
+    @include desktop {
+        left: -40px;
+    }
+}
+
+.swiper-centered-wrapper--promo .swiper-button-next {
+    right: -25px;
+
+    @include tablets {
+        right: -30px;
+    }
+
+    @include laptop {
+        right: -30px;
+    }
+
+    @include desktop {
+        right: -40px;
+    }
+}
+
+// простой слайдер как в акциях и на дет странице специалиста
+// Логотип на главной
+.parallax--logo {
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+    transition: $transition;
+}
+
+.parallax--logo-right {
+    right: 0;
+
+    @include tablets {
+        top: -30%;
+        right: 40px;
+    }
+
+    @include laptop {
+        right: 45px;
+    }
+
+    @include desktop {
+        right: 50px;
+    }
+}
+
+.parallax--logo-right-bottom {
+    bottom: 0%;
+
+    @include tablets {
+        // top: -30%;
+        left: 40px;
+    }
+
+    @include laptop {
+        left: 45px;
+        bottom: -35px;
+    }
+
+    @include desktop {
+        // top: -27%;
+        left: 50px;
+        bottom: -35px;
+    }
+}
+
+.parallax--logo {
+    display: none;
+
+    @include tablets {
+        display: block;
+        width: 55%;
+    }
+
+    @include laptop {
+        width: 62%;
+    }
+}
+
+.parallax--logo-left {
+    left: 0;
+
+    @include tablets {
+        left: 40px;
+        top: -22%;
+    }
+
+    top: -25%;
+
+    @include laptop {
+        top: -230px;
+        left: 45px;
+    }
+
+    @include desktop {
+        top: -200px;
+        left: 50px;
+    }
+}
+
+.parallax--logo-right--small {
+    @include tablets {
+        top: -9%;
+    }
+
+    @include laptop {
+        top: -13%;
+    }
+}
+
+// Фон с паралакс разделителем
+.parallax-divider {
+    height: 93px;
+    // background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $color-light-grey;
+    overflow: hidden;
+    position: relative;
+
+    @include tablets {
+        height: 200px;
+    }
+
+    @include laptop {
+        height: 420px;
+        background-attachment: fixed;
+    }
+
+    @include desktop {
+        height: 470px;
+    }
+}
+
+// Кнопка
+.button {
+    font-style: normal;
+    display: inline-block;
+    font-weight: 500;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #000000;
+    padding: 10px 30px;
+    background: #E2D7B9;
+    text-align: center;
+
+    @include tablets {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    @include laptop {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    @include desktop {
+        padding: 10px 70px;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    & span {
+        transition: $transition-speed;
+        display: inline-flex;
+        will-change: transform;
+        align-items: center;
+    }
+
+    &:hover span {
+        transform: scale(1.1);
+    }
+
+    & svg {
+        margin-right: 20px;
+        width: 20px;
+        height: 20px;
+
+        @include laptop {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+// Темная кнопка
+.button--dark {
+    font-weight: normal;
+    padding: 20px 20px;
+    display: inline-flex;
+    color: #ffffff;
+    background: #3A4047;
+    justify-content: center;
+    flex-shrink: 0;
+
+    &:hover span {
+        transform: scale(1.1);
+    }
+
+    @include tablets {
+        padding: 20px 50px;
+    }
+
+    @include laptop {
+        padding: 10px 80px;
+    }
+}
+
+.button--border {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 9px 20px;
+}
+
+// Класс для ресета списков
+.list-destroy {
+    @include list-destroy;
+}
+
+// Обертки для блока как в отзывах
+.flex-wrap {
+    display: flex;
+    flex-direction: column;
+
+    @include tablets {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @include laptop {
+        & h1 {
+            margin: 0 !important;
+        }
+    }
+}
+
+.flex-wrap--center {
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include laptop {
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+
+        & .button {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        & .link-back {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    & .link-back {
+        margin-top: 0;
+    }
+}
+
+.flex-wrap--title {
+    margin-top: 20px;
+
+    & .h3 {
+        margin-bottom: 20px;
+
+        @include laptop {
+            margin-bottom: 0;
+        }
+    }
+
+    @include laptop {
+        align-items: flex-start;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    @include desktop {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+.flex-wrap--title .button {
+    @include laptop {
+        margin-top: -5px;
+    }
+}
+
+// Обертки для блока как в отзывах
+// Кнопка закрыть
+.close {
+    @include btn-destroy;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    transition: $transition;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        left: 0;
+        background-color: #ffffff;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+        left: 0;
+        background-color: #ffffff;
+    }
+
+    &:hover {
+        transform: scale(0.85);
+    }
+}
+
+.fancybox-button div svg {
+    display: none;
+}
+
+.fancybox-button {
+    position: relative;
+    background: transparent;
+}
+
+.fancybox-button--arrow_left {
+    transform: rotate(180deg);
+}
+
+.fancybox-button--arrow_left::after,
+.fancybox-button--arrow_right::after {
+    content: "";
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.776 5.69324L1.32533 0.223905C1.008 -0.0747623 0.522667 -0.0747623 0.224 0.223905C-0.0746665 0.522571 -0.0746665 1.02657 0.224 1.32524L5.13333 6.23457L0.224 11.1439C-0.0746667 11.4612 -0.0746667 11.9466 0.224 12.2452C0.522667 12.5439 1.008 12.5439 1.32533 12.2452L6.776 6.79457C7.07467 6.47724 7.07467 5.9919 6.776 5.69324Z' fill='%23FFFFFF'/%3E%3C/svg%3E%0A");
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 35px;
+}
+
+.fancybox-button--arrow_left:disabled:after,
+.fancybox-button--arrow_right:disabled:after {
+    opacity: 0.5;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+
+    table-layout: fixed;
+
+    thead {
+        border: 1px solid $color-grey;
+        background-color: $color-grey;
+
+        th {
+            padding: 10px;
+            font-size: 18px;
+            font-weight: normal;
+            text-align: left;
+            color: #ffffff;
+
+            @include laptop {
+                padding: 24px 30px;
+                font-size: 24px;
+            }
+        }
+    }
+
+    td {
+        padding: 8px 10px;
+        font-size: 12px;
+        border: 0.5px solid $color-light-grey;
+        word-break: break-word;
+
+        @include laptop {
+            padding: 24px 30px;
+            font-size: 18px;
+        }
+    }
+
+    td:last-child {
+        white-space: nowrap;
+        text-align: center;
+
+        @include laptop {
+            min-width: 230px;
+        }
+    }
+}
+
+// TODO: rename classes
+.fl_upld {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+#fl_inp {
+    display: none;
+}
+
+.fl_upld label {
+    border-radius: 3px;
+    padding: 0 5px;
+    color: #012561;
+    text-align: center;
+    transition: .3s;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    height: 30px;
+
+    img {
+        margin-right: 6px;
+    }
+}
+
+.fl_upld label:hover {
+    opacity: 0.5;
+}
+
+.file-preview {
+    opacity: 0;
+    width: 95px;
+    height: 65px;
+    object-fit: cover;
+}
+
+.file-preview__wrapper {
+    position: relative;
+}
+
+.remove-button {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-grey;
+    transition: $transition-speed;
+    top: 0;
+    right: 0;
+    width: 21px;
+    height: 21px;
+
+    &:hover {
+        background-color: $color-red;
+    }
+}
+
+.swiper-slide {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.swiper-wrapper {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.swiper-container-autoheight {
+    padding-bottom: 40px;
+}

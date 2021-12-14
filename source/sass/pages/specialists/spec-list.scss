@@ -1,0 +1,146 @@
+.specialists__title {
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    @include tablets {
+        font-size: 28px;
+        line-height: 30px;
+        margin-top: 20px;
+    }
+    @include desktop {
+        font-size: 32px;
+        line-height: 36px;
+        margin-top: 20px;
+    }
+}
+
+.specialists__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include tablets {
+        &::after {
+            content: "";
+            position: static;
+            width: 32%;
+        }
+    }
+    @include laptop {
+        &::after {
+            content: "";
+            position: static;
+            width: 23%;
+        }
+        &::before {
+            content: "";
+            position: static;
+            width: 23%;
+            order: 1;
+        }
+    }
+}
+
+.specialists__item {
+    width: 48%;
+    margin-bottom: 30px;
+    @include el-items-with-text;
+    @include tablets {
+        width: 32%;
+        margin-bottom: 40px;
+    }
+    @include laptop {
+        width: 23%;
+        margin-bottom: 50px;
+    }
+}
+
+.specialists__img-wrap {
+    height: 195px;
+    @include big-mobile {
+        height: 282px;
+    }
+    @media(min-width:600px) {
+        height: 382px;
+    }
+    @include tablets {
+        height: 382px;
+    }
+    @include laptop {
+        height: 420px;
+    }
+    @include desktop {
+        height: 460px;
+    }
+}
+
+.specialists__name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    @include tablets {
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    @include laptop {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    @include desktop {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+.specialists__desc {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+    @include laptop {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+    }
+}
+
+// Нижний блок специалистов
+.specialists__vacancy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    @include laptop {
+        max-width: 805px;
+        margin: 0 auto;
+    }
+}
+
+.specialists__vacancy p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.specialists__vacancy .link-more {
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 20px;
+}

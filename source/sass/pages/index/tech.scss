@@ -1,0 +1,38 @@
+.tech {
+    @include block-style2;
+}
+
+.tech__list {
+    @include list-destroy;
+}
+
+.tech__item {
+    @include el-items;
+    color: #fff;
+    display: flex;
+}
+
+.tech__link {
+    background: linear-gradient(180deg, rgba(53, 51, 51, 0) 56.93%, #3A4047 110.12%);
+    opacity: 1 !important;
+}
+
+.tech__title {
+    position: relative;
+    z-index: 3;
+    margin-top: auto;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    pointer-events: none;
+    @include tablets {
+        padding: 20px;
+    }
+    @include laptop {
+        padding: 35px;
+    }
+    @include desktop {
+        padding: 35px;
+    }
+}

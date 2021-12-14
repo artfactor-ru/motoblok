@@ -1,0 +1,90 @@
+.video__list {
+    @include list-destroy;
+}
+
+.video__item {
+    @include el-items;
+    height: 184px;
+    @include tablets {
+        height: 200px;
+    }
+    @include laptop {
+        height: 270px;
+    }
+}
+
+.video__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.video__link {
+    @include video-link;
+    &::after {
+        display: none;
+    }
+}
+
+.block-light {
+    .video__link {
+        display: flex;
+        background-image: none;
+        color: #3A4047;
+        svg {
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
+            margin-left: 20px;
+            @include laptop {
+                width: 55px;
+                height: 55px;
+            }
+            @include desktop {
+                width: 75px;
+                height: 75px;
+            }
+        }
+        // &:hover {
+        //     color: #ffffff;
+        // }
+    }
+    .video__link-light {
+        color: $color-yellow;
+        // &:hover {
+        //     color: $color-yellow;
+        //     & svg {
+        //         opacity: 0.8;
+        //     }
+        // }
+    }
+}
+
+.button--inner {
+    margin-top: 30px;
+}
+
+// 
+.swiper-container--video .swiper-button-next,
+.swiper-container--video .swiper-button-prev {
+    color: inherit;
+    transition: $transition-speed;
+    @include laptop {
+        display: none;
+    }
+}
+
+.swiper-container--video .swiper-button-next:hover {
+    transform: translateX(5px);
+}
+
+.swiper-container--video .swiper-button-prev:hover {
+    transform: translateX(-5px);
+}
+
+.swiper-container--video .swiper-button-next::after,
+.swiper-container--video .swiper-button-prev::after {
+    font-size: 23px;
+    font-weight: bold;
+    @include laptop {
+        font-size: 30px;
+    }
+}

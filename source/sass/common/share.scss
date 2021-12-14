@@ -1,0 +1,132 @@
+.share {
+    // float: right;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    align-items: center;
+    @include tablets {
+        position: absolute;
+        margin-top: 0;
+        bottom: 0;
+        // right: 20px;
+        right: 40px
+    }
+    @include laptop {
+        right: 45px
+    }
+    @include desktop {
+        right: 50px;
+    }
+    &__text {
+        margin-right: 12px;
+        font-size: 14px;
+        line-height: 24px;
+        transition: transform 1s linear, color 0.5s ease-in-out;
+        cursor: pointer;
+        @include tablets {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        @include laptop {
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+}
+
+.share.active {
+    overflow: visible;
+}
+
+.share__btn {
+    width: 32px;
+    height: 32px;
+    @include btn-destroy;
+    border: 1px solid $color-light-grey;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+    @include tablets {
+        width: 48px;
+        height: 48px;
+    }
+    & svg {
+        width: 12px;
+        height: 12px;
+        @include tablets {
+            width: 24px;
+            height: 24px;
+        }
+        & path {
+            transition: $transition-speed;
+        }
+    }
+    // &:hover svg path {
+    //     fill: $color-light-grey;
+    // }
+}
+
+.share:hover .share__btn svg path {
+    fill: $color-light-grey;
+}
+
+.share:hover .share__text {
+    color: $color-light-grey;
+}
+
+.active .share__btn {
+    opacity: 0;
+}
+
+.active .share__text {
+    color: $color-grey !important;
+}
+
+.share__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: transform 1s linear;
+    transform: translateX(100%);
+    @include list-destroy;
+    display: flex;
+}
+
+.active .share__list {
+    transform: translateX(0px);
+}
+
+.share__link {
+    width: 32px;
+    height: 32px;
+    @include tablets {
+        width: 48px;
+        height: 48px;
+    }
+    border: 1px solid $color-light-grey;
+    margin-left: 8px;
+    display: flex;
+    border-radius: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & svg {
+        width: 18px;
+        height: 18px;
+        @include tablets {
+            width: 24px;
+            height: 24px;
+        }
+        & path {
+            transition: $transition-speed;
+        }
+    }
+    &:hover svg path {
+        fill: $color-light-grey;
+    }
+}

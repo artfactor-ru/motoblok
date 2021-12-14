@@ -1,0 +1,238 @@
+.inner-banner {
+    // height: 440px;
+    position: relative;
+    z-index: 100;
+    padding-top: 66px;
+    @include laptop {
+        padding-top: 70px;
+    }
+    @include desktop {
+        padding-top: 80px;
+    }
+    @include big-mobile {
+        height: 450px;
+    }
+    background-color: $color-grey;
+}
+
+.swiper-container--banner {
+    height: 100%;
+    width: 100%;
+    background-color: $color-grey;
+    & .swiper-slide {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        // min-height: 170px;
+        height: auto !important;
+        min-height: 100%;
+        // 
+        // & img {
+        //     opacity: 0;
+        // }
+        @include laptop {
+            align-items: center;
+            justify-content: flex-end;
+        }
+        // &-active {
+        //     & img {
+        //         opacity: 1 !important;
+        //     }
+        // }
+    }
+}
+
+.load .swiper-slide {
+    transition: opacity 1.5s ease-in-out !important;
+}
+
+// .load .swiper-slide-active {
+//     transition: opacity 0.5s linear !important;
+// }
+.inner-banner__wrap {
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 35px 20px;
+    text-align: center;
+    color: $color-grey;
+    @include tablets {
+        padding: 45px 35px;
+        width: 70%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 200px;
+    }
+    @include laptop {
+        margin: 0;
+        margin-left: auto;
+        width: 50%;
+        max-width: 500px;
+        padding: 45px 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 240px;
+    }
+}
+
+.inner-banner__wrap--right {
+    @include tablets {
+        margin: 102px 0 auto auto;
+        width: 70%;
+        max-width: 400px;
+    }
+    @include laptop {
+        margin: 0;
+        margin-left: auto;
+        width: 50%;
+        max-width: 500px;
+        padding: 45px 75px;
+    }
+}
+
+.inner-banner__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: $color-light-blue;
+    opacity: 0;
+    @include tablets {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    @include desktop {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+.inner-banner__desc {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-grey;
+    opacity: 0;
+    @include tablets {
+        font-size: 26px;
+        line-height: 34px;
+    }
+}
+
+.swiper-container--banner .swiper-button-prev {
+    left: -5px;
+    // display: none;
+    // @include tablets {
+    //     left: -20px;
+    // }
+    @include tablets {
+        left: 0;
+    }
+    @include laptop {
+        left: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @include desktop {
+        left: 20px;
+    }
+}
+
+.swiper-container--banner .swiper-button-next {
+    right: -5px;
+    // display: none;
+    @include tablets {
+        right: 0px;
+    }
+    @include laptop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 5px;
+    }
+    @include desktop {
+        right: 20px;
+    }
+}
+
+.swiper-container--banner .swiper-button-next,
+.swiper-container--banner .swiper-button-prev {
+    color: $color-grey;
+    transition: $transition-speed;
+    // opacity: 1;
+}
+
+.swiper-container--banner .swiper-button-next:hover {
+    transform: translateX(5px);
+}
+
+.swiper-container--banner .swiper-button-prev:hover {
+    transform: translateX(-5px);
+}
+
+.swiper-container--banner .swiper-button-next::after,
+.swiper-container--banner .swiper-button-prev::after {
+    font-size: 23px;
+    font-weight: bold;
+    @include laptop {
+        font-size: 30px;
+    }
+}
+
+.inner-banner__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.inner-banner__img--mobile {
+    display: block;
+    @include big-mobile {
+        display: none;
+    }
+}
+
+.inner-banner__img--tablet {
+    display: none;
+    @include big-mobile {
+        display: block;
+    }
+    @include laptop {
+        display: none;
+    }
+}
+
+.inner-banner__img--laptop {
+    display: none;
+    @include laptop {
+        display: block;
+    }
+    @include desktop {
+        display: none;
+    }
+}
+
+.inner-banner__img--desktop {
+    display: none;
+    @include desktop {
+        display: block;
+    }
+}
+
+// .swiper-container-initialized.swiper-container--banner .swiper-wrapper {
+//     transition: $transition!important;
+// }

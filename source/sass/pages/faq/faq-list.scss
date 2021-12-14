@@ -1,0 +1,154 @@
+.faq {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.faq__desc {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.faq__list {
+    @include list-destroy;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @include tablets {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+}
+
+.faq__item:not(:last-child) {
+    margin-bottom: 40px;
+    @include tablets {
+        margin-bottom: 60px;
+    }
+}
+
+.faq__quest {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E6E6E6;
+    @include tablets {
+        padding-bottom: 35px;
+    }
+}
+
+.faq__answ {
+    padding-top: 15px;
+    border-bottom: 1px solid $color-light-grey;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+    @include tablets {
+        padding-top: 20px;
+        padding-bottom: 45px;
+        padding-left: 35px;
+    }
+}
+
+.faq__quest-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 5px;
+    @include tablets {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    @include laptop {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+}
+
+.faq__quest-name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    @include tablets {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+.faq__quest-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include tablets {
+        justify-content: flex-start;
+    }
+}
+
+.faq__quest-time {
+    font-style: normal;
+    font-weight: 500;
+    color: $color-light-grey;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-block;
+    @include tablets {
+        font-size: 18px;
+        line-height: 24px;
+        margin-left: 20px;
+    }
+}
+
+.faq__answ-img {
+    width: 105px;
+    margin-right: 40px;
+}
+
+.faq__answ-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq__answ-author {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    @include tablets {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    & a {
+        color: inherit;
+        transition: $transition-speed;
+        &:hover {
+            color: $color-light-blue;
+        }
+    }
+}
+
+.faq__answ-position {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    @include tablets {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+.faq__text {
+    margin-top: 30px;
+    width: 100%;
+    @include p-style;
+}
+
+.faq__text a {
+    color: $color-light-blue;
+    text-decoration: underline;
+    transition: $transition;
+    &:hover {
+        color: $color-light-grey;
+    }
+}

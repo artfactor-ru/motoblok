@@ -1,0 +1,25 @@
+.sub-tag--promo {
+    display: block;
+    margin-top: 30px;
+    @include laptop {
+        // margin-bottom: 45px;
+    }
+}
+
+.sub-tag--promo .sub-tag__link {
+    border: 1px solid $color-grey;
+    color: $color-grey;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 10px;
+    &.current {
+        border: 1px solid $color-yellow;
+        color: $color-grey;
+    }
+    @include tablets {
+        font-size: 20px;
+        line-height: 36px;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+    }
+}

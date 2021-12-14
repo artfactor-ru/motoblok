@@ -1,0 +1,41 @@
+.reviews {
+    @include block-style2;
+}
+
+.reviews__list {
+    @include list-destroy;
+}
+
+.reviews__item {
+    @include el-items;
+    display: flex;
+}
+
+.reviews__link {
+    @include video-link;
+}
+
+.reviews__link-light {
+    background-image: url(../img/btn-play-dark.svg);
+}
+
+.reviews__title {
+    position: relative;
+    z-index: 10;
+    margin-top: auto;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    pointer-events: none;
+    // color: #fff;
+    @include tablets {
+        padding: 20px;
+    }
+    @include laptop {
+        padding: 35px;
+    }
+    @include desktop {
+        padding: 35px;
+    }
+}
