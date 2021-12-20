@@ -78,3 +78,38 @@ a {
     text-transform: uppercase;
     padding: 11px 38px;
 }
+
+.personal {
+    display: flex;
+}
+
+.personal .basic {
+    display: none;
+}
+
+.personal .checkbox-style {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.personal input.basic:checked + .checkbox-style:after {
+    transform: scale(1);
+}
+
+.checkbox-style:after {
+    content: url(../img/accept.svg);
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: .2s;
+}
