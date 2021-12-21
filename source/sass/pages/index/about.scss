@@ -1,0 +1,39 @@
+.about {
+  background-color: $color-bg-grey;
+  padding-bottom: 90px;
+  &__desc {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+  }
+  &__features {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    & .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-number {
+        color: $color-primary;
+        font-size: 72px;
+        font-weight: 400;
+        line-height: 53px;
+        margin-bottom: 25px;
+      }
+      &-name {
+        color: $color-primary;
+        font-weight: 600;
+        font-size: 26px;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+      &-sub {
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+  }
+}
