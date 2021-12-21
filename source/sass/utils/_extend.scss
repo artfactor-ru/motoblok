@@ -69,6 +69,12 @@ a {
     font-size: 52px;
     font-family: $font-primary;
     font-weight: 400;
+    margin-bottom: 40px;
+    margin-top: 0;
+    text-align: center;
+    &--light {
+        color: #fff;
+    }
 }
 
 .button {
@@ -77,6 +83,11 @@ a {
     border: 1px solid $color-primary;
     text-transform: uppercase;
     padding: 11px 38px;
+    width: max-content;
+    &--light {
+        color: #fff;
+        border: 1px solid  #fff;
+    }
 }
 
 .personal {

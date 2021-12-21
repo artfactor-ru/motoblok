@@ -16,23 +16,20 @@ import Swiper, {
   HashNavigation,
 } from "swiper";
 
-Swiper.use([
-  Scrollbar,
-  Controller,
-  A11y,
-  Thumbs,
-  EffectFade,
-  EffectCoverflow,
-  Pagination,
-  Navigation,
-  Autoplay,
-  Mousewheel,
-  Keyboard,
-  Lazy,
-  HashNavigation,
-]);
+// Swiper.use([
+//   Scrollbar,
+//   Controller,
+//   A11y,
+//   Thumbs,
+//   EffectFade,
+//   EffectCoverflow,
+//   Pagination,
+//   Navigation,
+//   Autoplay,
+//   Mousewheel,
+//   Keyboard,
+//   Lazy,
+//   HashNavigation,
+// ]);
 
-let newsSlider = new Swiper('.hero__slider', {
-  slidesPerView: 1,
-});
 
