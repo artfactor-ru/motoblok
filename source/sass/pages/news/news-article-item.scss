@@ -23,3 +23,19 @@
 		margin-bottom:40px;
 	}
 }
+
+.article-page__text-history {
+	display:flex;
+	flex-direction:column;
+	& .line {
+		display:flex;
+		flex-direction:row;
+		margin-bottom:60px;
+		& .img-right {
+			margin-left:60px;
+		}
+		& .img-left {
+			margin-right:60px;
+		}
+	}
+}

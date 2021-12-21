@@ -186,3 +186,35 @@ a {
 		
 	}
 }
+
+.subsection-list {
+	margin-bottom:40px;
+	& ul {
+		display:flex;
+		flex-direction:row;
+	}
+	& li {
+		margin-right:45px;
+		&:last-child {
+			margin-right:0;
+		}
+	}
+	& a {
+		color:#848484;
+		font-size:18px;
+		line-height:24px;
+		display:inline-block;
+		position:relative;
+		&.active {
+			color:$color-main;
+			&:after {
+				position:absolute;
+				content:'';
+				left:0;
+				bottom:-8px;
+				width:100%;
+				border-bottom:2px dashed $color-main;
+			}
+		}
+	}
+}
