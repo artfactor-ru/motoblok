@@ -49,28 +49,3 @@
 		}
 	}
 }
-
-.article-page {
-	& .s-title {
-	}
-}
-.article-page__container {
-	display:flex;
-	flex-direction:row;
-}
-.article-page__filter {
-	display:flex;
-	flex-direction:column;
-}
-.article-page__list {}
-.article-page__item {
-	display:flex;
-	flex-direction:row;
-	
-	&-img {}
-	&-text {}
-	&-date {}
-	&-title {}
-	&-abstract {}
-	&-viewed {}
-}
