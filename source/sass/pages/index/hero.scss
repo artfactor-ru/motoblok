@@ -7,7 +7,6 @@
             flex-direction: column;
             & li {
                 border-bottom: 1px solid #BED0E2;
-
                 height: 63px;
                 display: flex;
                 & a {
@@ -20,6 +19,9 @@
                     }
                     & span {
                         font-weight: 500;
+                    }
+                    @include desktop1680 {
+                        padding: 10px 0 10px 40px;
                     }
                 }
                 & span.catalog-link {

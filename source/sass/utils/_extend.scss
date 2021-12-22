@@ -25,6 +25,14 @@ body {
     padding-left: 60px;
     margin-right: auto;
     margin-left: auto;
+	@include desktop1680 {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+	@include big-mobile {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
 }
 
 @media (min-width: 576px) {
@@ -188,6 +196,7 @@ a {
 	}
 }
 
+
 .form {
 }
 label {
@@ -233,3 +242,6 @@ input:checked + .checkbox-style:after {
     transform: scale(1);
 }
 
+section.grey-bg {
+	background-color: $color-bg-grey;
+}
