@@ -235,6 +235,23 @@
         flex-direction: column;
         color: #fff;
         font-size: 12px;
+        position: relative;
+        width: 30%;
+        & .count {
+            position: absolute;
+            top: -7px;
+            right: 23px;
+            width: 20px;
+            height: 20px;
+            background-color: $color-primary;
+            border-radius: 50%;
+            font-family: $font-primary;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         & span {
             display: block;
             margin-top: 10px;
