@@ -1,369 +1,53 @@
+@mixin old-small-mobile {
+    @media(max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin small-mobile {
+    @media(max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin mid-mobile {
+    @media(max-width: 414px) {
+        @content;
+    }
+}
+
 @mixin big-mobile {
-    @media(min-width: 450px) {
+    @media(max-width: 480px) {
         @content;
     }
 }
 
 @mixin tablets {
-    @media(min-width: 768px) {
+    @media(max-width: 768px) {
         @content;
     }
 }
 
-@mixin laptop {
-    @media(min-width: 1180px) {
+@mixin big-tablets {
+    @media(max-width: 1024px) {
         @content;
     }
 }
 
-@mixin desktop {
-    @media(min-width: 1580px) {
+@mixin laptop1200 {
+    @media(max-width: 1200px) {
         @content;
     }
 }
 
-@mixin btn-destroy {
-    border: none;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-    // box-sizing: border-box;
-    outline: none;
-    cursor: pointer;
-}
-
-@mixin input-destroy {
-    border: none;
-    background: transparent;
-    padding: 0;
-    font: inherit;
-    margin: 0;
-    box-sizing: border-box;
-    outline: none;
-    resize: none;
-}
-
-// Удаляем стили списка
-@mixin list-destroy {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    // font-style: inherit;
-    // font-size: inherit;
-    // font-family: inherit;
-}
-
-// Типографика
-@mixin h2-style {
-    // margin: 0;
-    padding: 0;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 34px;
-    display: block;
-    margin-bottom: 25px;
-
-    @include tablets {
-        font-size: 36px;
-        line-height: 53px;
-    }
-
-    @include laptop {
-        font-size: 48px;
-        line-height: 53px;
-    }
-
-    @include desktop {
-        font-size: 48px;
-        line-height: 53px;
+@mixin desktop1440 {
+    @media(max-width: 1440px) {
+        @content;
     }
 }
 
-@mixin h3-style {
-    // margin: 0;
-    padding: 0;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 26px;
-
-    @include tablets {
-        font-size: 24px;
-        line-height: 32px;
-    }
-
-    @include laptop {
-        font-size: 28px;
-        line-height: 32px;
-    }
-
-    @include desktop {
-        font-size: 32px;
-        line-height: 36px;
-    }
-}
-
-@mixin p-style {
-    margin: 0;
-    padding: 0;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-
-    @include tablets {
-        font-size: 14px;
-        line-height: 24px;
-    }
-
-    @include laptop {
-        font-size: 14px;
-        line-height: 24px;
-    }
-
-    @include desktop {
-        font-size: 18px;
-        line-height: 30px;
-    }
-}
-
-// Заголовок блоков
-@mixin block-title {
-    margin-bottom: 25px;
-
-    @include tablets {
-        margin-bottom: 20px;
-    }
-
-    @include laptop {
-        margin-bottom: 40px;
-    }
-
-    @include desktop {
-        margin-bottom: 40px;
-    }
-}
-
-// Отступы блоков
-@mixin block-style1 {
-    padding: 30px 0px;
-
-    @include tablets {
-        padding: 30px 0px 75px;
-    }
-
-    @include laptop {
-        padding: 50px 0px 145px;
-    }
-
-    @include desktop {
-        padding: 50px 0px 110px;
-    }
-
-    & h2 {
-        @include block-title;
-    }
-
-    & .h2 {
-        display: block;
-        margin-bottom: 25px;
-        @include block-title;
-    }
-}
-
-@mixin block-style2 {
-    padding: 30px 0px;
-
-    @include tablets {
-        padding: 50px 0px 50px;
-    }
-
-    @include laptop {
-        padding: 60px 0px 60px;
-    }
-
-    @include desktop {
-        padding: 60px 0px 60px;
-    }
-
-    & h2 {
-        @include block-title;
-
-    }
-
-    & .h2 {
-        @include block-title;
-
-    }
-}
-
-// Блок внутренних страниц
-@mixin block-inner {
-    padding: 20px 0px;
-
-    @include tablets {
-        padding: 20px 0px 45px;
-    }
-
-    @include laptop {
-        padding: 20px 0px 145px;
-    }
-
-    @include desktop {
-        padding: 20px 0px 110px;
-    }
-
-    & h2 {
-        @include block-title;
-        @include h3-style;
-    }
-
-    & .h2 {
-        @include block-title;
-        margin-bottom: 25px;
-        @include h3-style;
-
-    }
-
-    & h1 {}
-}
-
-@mixin block-style3 {
-    padding: 30px 0px;
-
-    @include tablets {
-        padding: 44px 0px 64px;
-    }
-
-    @include laptop {
-        padding: 100px 0px 110px;
-    }
-
-    @include desktop {
-        padding: 50px 0px 80px;
-    }
-
-    & h2 {
-        @include block-title;
-    }
-
-    & .h2 {
-        @include block-title;
-    }
-}
-
-// просто элемент с картинкой без текста
-@mixin el-items {
-    position: relative;
-    overflow: hidden;
-
-    & img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: 0.4s;
-        image-rendering: -webkit-optimize-contrast;
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        -ms-backface-visibility: hidden;
-        will-change: transform;
-        transform: translateZ(0);
-    }
-
-    &:hover {
-        & img {
-            transform: scale(1.1);
-        }
-    }
-
-    & a {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-    }
-}
-
-// Элемент с ссылкой и картинкой наведение scale
-@mixin el-items-with-text {
-    position: relative;
-
-    &>a {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-    }
-
-    & div {
-        overflow: hidden;
-    }
-
-    & img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        transition: 0.4s;
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        -ms-backface-visibility: hidden;
-        transition: $transition-speed;
-    }
-
-    &:hover {
-        & img {
-            transform: scale(1.09);
-        }
-    }
-}
-
-// Ссылка с видео
-@mixin video-link {
-    background: url(../img/btn-play.svg);
-    background-repeat: no-repeat;
-    // background-position: center;
-    background-position: 20px 20px;
-    background-size: 50px 50px;
-    opacity: 1 !important;
-
-    @include laptop {
-        background-size: 56px 56px;
-    }
-
-    @include desktop {
-        background-size: 75px 75px;
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(180deg, rgba(53, 51, 51, 0) 56.93%, $color-blue 110.12%)
-    }
-}
-
-// Стили дат
-@mixin text-date {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    display: inline-block;
-
-    @include tablets {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    @include laptop {
-        font-size: 18px;
-        line-height: 24px;
+@mixin desktop1680 {
+    @media(max-width: 1680px) {
+        @content;
     }
 }
