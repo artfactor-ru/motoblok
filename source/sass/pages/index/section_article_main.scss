@@ -2,6 +2,12 @@
 	background:#fff;
 	padding:80px 0;
 	
+	&.related {
+		padding-top:0;
+		& .s-title {
+			text-align:left;
+		}
+	}
 	& .s-title {
 		text-align:center;
 		margin:0 0 20px;

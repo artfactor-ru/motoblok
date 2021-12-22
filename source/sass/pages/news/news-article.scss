@@ -2,6 +2,9 @@
 	& .p-title {
 		line-height:70px;
 	}
+	& .s-title {
+		text-align:left;
+	}
 }
 .article-page__container {
 	display:flex;
@@ -30,7 +33,7 @@
 			&:after {
 				position:absolute;
 				top: 2px;
-				right: -15px;
+				right: -24px;
 				content:url(../img/list-arrow.png);
 			}
 		}
