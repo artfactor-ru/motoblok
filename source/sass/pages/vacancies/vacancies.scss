@@ -1,5 +1,52 @@
-.vacancies-form {
-	display:grid;
-	grid-template-columns:1fr 1fr;
-	gap:0 60px;
+.vacancies {
+	& .s-title { text-align:left; }
+	&__content {
+		display:flex;
+		flex-direction:row;
+		padding-bottom:60px;
+		& .text {
+			padding-right:40px;
+		}
+	}
+	&-list {
+		&__list {
+			flex-direction:column;
+			&-item {
+				display:flex;
+				flex-direction:row;
+				justify-content:space-between;
+				border-top:1px solid #d4d4d4;
+				padding:35px 0 40px 60px;
+				background:url(../img/hh.svg) left center no-repeat;
+				& .position {
+					width:50%;
+					font-size:26px;
+					& a {
+						font-weight:600;
+						&:hover {
+							color:#ec0000;
+						}
+					}
+				}
+				& .salary {
+					width:30%;
+					font-size:26px;
+				}
+				& .date {
+					font-size:18px;
+					color:#aeaeae;
+				}
+			}
+		}
+	}
+	&-form {
+		padding:60px 0;
+		display:grid;
+		grid-template-columns:1fr 1fr;
+		gap:0 60px;
+		&__form {
+			& .file-upload {
+			}
+		}
+	}
 }
