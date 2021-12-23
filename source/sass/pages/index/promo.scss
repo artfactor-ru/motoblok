@@ -9,25 +9,74 @@
     grid-row-gap: 0;
     gap: 25px 20px;
     & .item {
+      @include big-tablets {
+        width: 31%;
+      }
+      @include tablets {
+        width: 30%;
+      }
+      @include big-mobile {
+        width: 47%;
+      }
+      @include small-mobile {
+        width: 46%;
+      }
       &-pic {
         height: 305px;
-        background-color: grey;
+        position: relative;
+        & .sale-sticker {
+          font-size: 14px;
+          background-color: $color-primary;
+          padding: 3px 21px;
+          color: #fff;
+          position: absolute;
+          top: 25px;
+          left: 0;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
         & img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
+        @include desktop1680 {
+          height: 262px;
+        }
+        @include laptop1200 {
+          height: 217px;
+        }
+        @include mid-mobile {
+          height: 180px;
+        }
+        @include small-mobile {
+          height: 162px;
+        }
+        @include old-small-mobile {
+          height: 133px;
+        }
+
       }
       &-name {
         padding-top: 12px;
         display: block;
         font-size: 18px;
+        @include big-mobile {
+          font-size: 16px;
+        }
+        @include small-mobile {
+          font-size: 14px;
+          padding-top: 9px;
+        }
       }
       &-0 {
         grid-row-start: 1;
         grid-column-start: 1;
         grid-row-end: 2;
         grid-column-end: 3;
+        @include big-tablets {
+          width: 100%;
+        }
       }
       &-1 {
         grid-row-start: 1;
@@ -65,6 +114,15 @@
         grid-row-end: 3;
         grid-column-end: 5;
       }
+
     }
+    @include big-tablets {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  @include big-mobile {
+    padding: 50px 0 40px 0;
   }
 }

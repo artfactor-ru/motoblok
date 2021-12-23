@@ -3,7 +3,11 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 650px;
+  & .s-title {
+    @include mid-mobile {
+      margin-bottom: 20px;
+    }
+  }
   & .container {
     display: flex;
     align-items: center;
@@ -11,5 +15,14 @@
     justify-content: center;
     height: 100%;
     min-height: 650px;
+    @include desktop1440 {
+      min-height: 440px;
+    }
+    @include tablets {
+      min-height: 300px;
+    }
+    @include small-mobile {
+      min-height: 217px;
+    }
   }
 }

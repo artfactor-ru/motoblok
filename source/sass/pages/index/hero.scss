@@ -1,6 +1,7 @@
 .hero {
     min-height: 700px;
     display: flex;
+    position: relative;
     &__nav {
         width: 490px;
         & ul {
@@ -16,6 +17,9 @@
                     width: 100%;
                     & img {
                         margin-right: 30px;
+                        @include laptop1200 {
+                            margin-right: 20px;
+                        }
                     }
                     & span {
                         font-weight: 500;
@@ -28,6 +32,9 @@
                     color: $color-primary;
                 }
             }
+        }
+        @include big-tablets {
+            display: none;
         }
     }
     &__banner {
@@ -61,12 +68,31 @@
                 width: max-content;
                 text-transform: uppercase;
                 margin-bottom: 25px;
+                @include tablets {
+                    margin-bottom: 15px;
+                }
             }
             & .name {
                 font-family: $font-primary;
                 font-size: 68px;
                 line-height: 68px;
                 margin-bottom: 15px;
+                @include tablets {
+                    font-size: 40px;
+                    line-height: 40px;
+                }
+                @include tablets {
+                    margin-bottom: 10px;
+                }
+                @include mid-mobile {
+                    font-size: 36px;
+                }
+                @include small-mobile {
+                    font-size: 34px;
+                }
+                @include old-small-mobile {
+                    font-size: 30px;
+                }
             }
             & .desc {
                 font-family: $font-main;
@@ -75,6 +101,42 @@
                 margin: 0;
                 font-weight: 300;
                 margin-bottom: 45px;
+                @include laptop1200 {
+                    margin-bottom: 40px;
+                }
+                @include tablets {
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 25px;
+                }
+                @include small-mobile {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+            @include desktop1680 {
+                width: 60%;
+                padding: 0 35px;
+            }
+            @include laptop1200 {
+                padding: 0 30px;
+                width: 70%;
+            }
+            @include big-tablets {
+                padding: 0 40px;
+            }
+            @include tablets {
+                width: 55%;
+            }
+            @include big-mobile {
+                padding: 0 30px;
+                width: 80%;
+            }
+            @include mid-mobile {
+                width: 86%;
+            }
+            @include small-mobile {
+                width: 90%;
             }
         }
     }
@@ -98,7 +160,32 @@
             opacity: 1;
             &-active {
                 border-bottom: 4px solid $color-blue;
+                @include big-tablets {
+                    background-color: $color-blue !important;
+                }
             }
+            @include big-tablets {
+                border-bottom: none;
+                width: 54px;
+                height: 3px;
+                margin-right: 10px;
+                background-color: #BFBFBF;
+                padding-bottom: 0;
+            }
+        }
+        &--mobile {
+            display: none;
+            @include big-tablets {
+                display: flex;
+            }
+        }
+        @include laptop1200 {
+            left: 30px;
+        }
+        @include big-tablets {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -21px;
         }
     }
     &__socials {
@@ -112,6 +199,29 @@
                 margin-bottom: 10px;
             }
         }
+        @include big-tablets {
+            display: none;
+        }
     }
+    @include big-tablets {
+        min-height: 570px;
+    }
+    @include tablets {
+        min-height: 410px;
+    }
+}
 
+.social-share {
+    display: none;
+    position: absolute;
+    bottom: -60px;
+    right: 15px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #DADADA;
+    align-items: center;
+    justify-content: center;
+    @include big-tablets {
+        display: flex;
+    }
 }
