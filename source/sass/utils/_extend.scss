@@ -339,6 +339,43 @@ input:checked + .checkbox-style:after {
 	}
 }
 
+.accordion {
+	flex-direction:column;
+	&__item {
+		margin-bottom:6px;
+		&-title {
+			font-weight:600;
+			line-height:20px;
+			height:74px;
+			border-bottom:4px solid #1559A3;
+			background:#eaeaea;
+			padding:25px 100px 25px 30px;
+			position:relative;
+			& .arrow {
+				position:absolute;
+				top:16px;
+				right:30px;
+				width:40px;
+				height:40px;
+				border:1px solid #1559A3;
+				background:url(../img/accordion_arrow.svg) center center no-repeat;
+			}
+			&.active {
+				color:#fff;
+				background:#1559A3;
+				& .arrow {
+					border-color:#fff;
+					background-image:url(../img/accordion_arrow-white.svg);
+				}
+			}
+		}
+		&-text {
+			padding:20px 30px 22px;
+		}
+	}
+}
+
+
 section.grey-bg {
 	background-color: $color-bg-grey;
 }
