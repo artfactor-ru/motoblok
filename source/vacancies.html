@@ -1,0 +1,43 @@
+<include src="components/header.html"></include>
+<section class="vacancies grey-bg">
+	<div class="container">
+		<div class="vacancies-form">
+			<div class="vacancies-form__text">
+				<h2 class="s_title">Свяжитесь с нами</h2>
+				<p>Заполните поля и мы свяжемся с вами!</p>
+				<p>Или позвоните в отдел персонала: 8 (812) 292-96-39</p>
+			</div>
+			<div class="vacancies-form__form">
+				<form class="basic-form">
+					<label>
+						<span class="text">Имя*</span>
+						<input type="text" name="" value="" required placeholder="Иван Иванов" />
+					</label>
+					<label>
+						<span class="text">Телефон*</span>
+						<input type="tel" name="" value="" required placeholder="+7 (___) ___-__-__" />
+					</label>
+					<label>
+						<span class="text">Желаемая должность *</span>
+						<input type="text" name="" value="" required placeholder="Выберите должность" list="vacancies" />
+						<datalist id="vacancies">
+							<option value="Инженер по подготовке производства">
+							<option value="Оператор станков с программным управлением">
+							<option value="Кладовщик-комплектовщик">
+							<option value="Слесарь механосборочных работ">
+						</datalist>
+					</label>
+					<div class="basic-form__buttons">
+						<label class="basic-form__privacy">
+							<input type="checkbox" checked>
+							<span class="checkbox-style checkbox-style--light"></span>
+							<span class="text">Я согласен на обработку персональных данных</span>
+						</label>
+						<button class="button button--blue" type="submit">Отправить резюме</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<include src="components/footer.html"></include>
