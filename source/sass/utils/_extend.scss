@@ -341,6 +341,7 @@ input:checked + .checkbox-style:after {
 
 .accordion {
 	flex-direction:column;
+	margin-bottom:60px;
 	&__item {
 		margin-bottom:6px;
 		&-title {
@@ -374,7 +375,16 @@ input:checked + .checkbox-style:after {
 		}
 	}
 }
+.accordion__item-title + .accordion__item-text {
+	display:none;
+	height:0;
+}
+.accordion__item-title.active + .accordion__item-text {
+	display:block;
+	height:auto;
+}
 
+.map_placeholder { margin:40px 0 60px; }
 
 section.grey-bg {
 	background-color: $color-bg-grey;
