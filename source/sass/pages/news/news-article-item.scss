@@ -19,7 +19,7 @@
 			}
 		}
 		& .left-side {
-			
+			max-width:820px;
 		}
 	}
 	& .p-title {
@@ -104,5 +104,10 @@
 				margin-top:0;
 			}
 		}
+	}
+}
+.feedback-form {
+	&__form {
+		padding-bottom:60px;
 	}
 }

@@ -306,6 +306,7 @@ input:checked + .checkbox-style:after {
 .basic-form {
 	& label {
 		background:#fff;
+		border:1px solid #bdbdbd;
 		padding:7px 17px;
 		margin-bottom:16px;
 		flex-direction:column;
@@ -327,6 +328,7 @@ input:checked + .checkbox-style:after {
 			background:url(../img/paperclip_red.svg) 0 7px no-repeat transparent;
 			padding-left:40px;
 			font-size:18px;
+			border:none;
 			& .text {
 				color:#ec0000;
 				line-height:26px;
@@ -336,6 +338,7 @@ input:checked + .checkbox-style:after {
 					display:inline-block;
 					position:relative;
 					background-color:#fff;
+					border:1px solid #bdbdbd;
 					padding:8px 35px 8px 10px;
 					margin-right:10px;
 					&:after {
@@ -365,10 +368,21 @@ input:checked + .checkbox-style:after {
 			width:0;
 			height:0;
 		}
+		& textarea {
+			border:none;
+			outline:none;
+			min-height:120px;
+			resize:vertical;
+		}
 	}
 	&__buttons {
 		display:flex;
 		flex-direction:row;
+		justify-content:space-between;
+		
+		& label {
+			border:none;
+		}
 		& .button {
 			padding:20px 40px;
 			white-space:nowrap;
