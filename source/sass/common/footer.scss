@@ -19,13 +19,10 @@
         width: max-content;
         margin-top: 20px;
         & input {
-            padding: 12px;
-            border: none;
-            background: transparent;
+			padding: 12px;
             font-family: $font-primary;
             font-style: italic;
             font-size: 14px;
-            outline: none;
             color: #fff;
         }
         & button {
