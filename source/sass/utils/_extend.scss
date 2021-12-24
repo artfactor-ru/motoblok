@@ -193,17 +193,13 @@ a {
 
 .subsection-list {
 	margin-bottom:40px;
-	& ul {
+	& > ul {
 		display:flex;
 		flex-direction:row;
+		gap:45px;
+		position:relative;
 	}
-	& li {
-		margin-right:45px;
-		&:last-child {
-			margin-right:0;
-		}
-	}
-	& a {
+	& > ul > li > a {
 		color:#848484;
 		font-size:18px;
 		line-height:24px;
@@ -218,6 +214,32 @@ a {
 				bottom:-8px;
 				width:100%;
 				border-bottom:2px dashed $color-main;
+			}
+		}
+		&.active + .aside-list__mobile {
+			display:block;
+		}
+	}
+	& .aside-list__mobile {
+		display:none;
+		position:absolute;
+		top:100%;
+		bottom:0;
+		width:100%;
+		height:100%;
+		& .aside-list {
+			padding:25px 0;
+			background:#eaeaea;
+			gap:15px;
+			&__item {
+				padding-left:40px;
+				& a { font-size:16px;
+					&.active:before {
+						top:2px;
+						left:-25px;
+						transform:rotate(0);
+					}
+				}
 			}
 		}
 	}
@@ -398,6 +420,32 @@ input:checked + .checkbox-style:after {
 .accordion__item-title.active + .accordion__item-text {
 	display:block;
 	height:auto;
+}
+
+.aside-list {
+	flex-direction:column;
+	gap:30px;
+	&__item {
+		padding-left:90px;
+		& a {
+			font-size:18px;
+			line-height:30px;
+			position:relative;
+			&.active {
+				color:#ec0000;
+				&:before {
+					content:'';
+					position:absolute;
+					left:-40px;
+					top:4px;
+					width:10px;
+					height:14px;
+					background:url(../img/list-arrow.png) 0 0 no-repeat;
+					transform:rotate(180deg);
+				}
+			}
+		}
+	}
 }
 
 .map_placeholder { margin:40px 0 60px; }

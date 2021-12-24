@@ -1,5 +1,27 @@
 .article-page {
-	//position:relative;
+	position:relative;
+	&--with-right-side .container {
+		display:flex;
+		flex-direction:row;
+		gap:70px;
+		& .right-side {
+			padding-top:260px;
+			background:#eaeaea;
+			&:before {
+				content:'';
+				position:absolute;
+				right:0;
+				top:0;
+				width:30%;
+				height:100vh;
+				background:#eaeaea;
+				z-index:-1;
+			}
+		}
+		& .left-side {
+			
+		}
+	}
 	& .p-title {
 		line-height:70px;
 	}
@@ -7,18 +29,6 @@
 		display:flex;
 		flex-direction:row;
 		margin-bottom:40px;
-		&--with-right-side {
-			& .right-side:before {
-				position:absolute;
-				content:'';
-				left:60%;
-				top:0;
-				width:40%;
-				height:100vh;
-				background:#eaeaea;
-				z-index:-1;
-			}
-		}
 	}
 	&__text {
 		font-size:18px;
@@ -77,14 +87,6 @@
 				float:left;
 				padding-right:50px;
 			}
-		}
-	}
-	& .address {
-		width:820px;
-	}
-	& .right-side {
-		& ul {
-			flex-direction:column;
 		}
 	}
 }
