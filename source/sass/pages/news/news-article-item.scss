@@ -89,4 +89,20 @@
 			}
 		}
 	}
+	& .address {
+		margin-top:15px;
+		&-text {
+			display:flex;
+			flex-direction:row;
+			font-size:18px;
+			line-height:30px;
+			& span {
+				color:#848484;
+				width:30%;
+			}
+			& p {
+				margin-top:0;
+			}
+		}
+	}
 }
