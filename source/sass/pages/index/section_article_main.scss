@@ -12,7 +12,6 @@
 		margin:0 0 20px;
 	}
 	&-list {
-
 		display:flex;
 		flex-direction:row;
 		justify-content:center;
@@ -27,6 +26,7 @@
 	&-item {
 		width: 100%;
 		padding:10px;
+
 		display:grid;
 		grid-template-columns:1fr 1fr 1fr;
 		gap:0 20px;

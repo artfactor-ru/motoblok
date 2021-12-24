@@ -259,6 +259,63 @@
             display: block;
             margin-top: 10px;
         }
+        & a {
+            color: #ACACAC;
+            text-decoration: underline;
+        }
+        @include big-tablets {
+            border-top: 1px solid #6C6C6C;
+            font-size: 12px;
+        }
+        @include big-mobile {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    @include big-mobile {
+        padding: 40px 0;
+    }
+}
+
+.footer-mobile-nav {
+    display: none;
+    background-color: $color-blue;
+    padding: 12px 0;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    & a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        font-size: 12px;
+        position: relative;
+        width: 30%;
+        & .count {
+            position: absolute;
+            top: -7px;
+            right: 23px;
+            width: 20px;
+            height: 20px;
+            background-color: $color-primary;
+            border-radius: 50%;
+            font-family: $font-primary;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        & span {
+            display: block;
+            margin-top: 10px;
+        }
+    }
+    @include big-mobile {
+        display: flex;
     }
     @include big-mobile {
         display: flex;
