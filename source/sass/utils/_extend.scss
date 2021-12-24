@@ -11,6 +11,19 @@ body {
     color: $color-main;
 }
 
+.wrapper {
+	padding-top: 98px;
+	@include big-tablets {
+		padding-top: 127px;
+	}
+	@include tablets {
+		padding-top: 111px;
+	}
+	@include old-small-mobile {
+		padding-top: 107px;
+	}
+}
+
 .container {
     width: 100%;
     padding-right: 15px;
@@ -83,6 +96,9 @@ a {
     &--light {
         color: #fff;
     }
+	@include tablets {
+		font-size: 30px;
+	}
 }
 
 .p-title {

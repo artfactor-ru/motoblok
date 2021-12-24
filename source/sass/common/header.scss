@@ -1,8 +1,14 @@
 .header {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
     background: #fff;
     padding: 25px 0;
+    z-index: 100;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: .3s;
     &__search-mobile {
         display: none;
         margin-top: 10px;
@@ -14,6 +20,9 @@
             padding: 10px;
             width: 100%;
             border: none;
+            @include old-small-mobile {
+                font-size: 12px;
+            }
         }
         & button {
             border: none;
@@ -122,7 +131,7 @@
         transition: .3s;
         text-decoration: none;
         position: relative;
-
+        cursor: pointer;
         & svg {
             margin-left: 8px;
             margin-top: 2px;
@@ -182,6 +191,9 @@
         font-size: 20px;
         @include big-tablets {
             font-size: 16px;
+        }
+        @include old-small-mobile {
+            font-size: 12px;
         }
     }
     @include desktop1440 {
@@ -256,13 +268,50 @@
 .mega-menu {
     background-color: #E3E4EB;
     width: 100%;
-    padding: 40px 0;
-    display: none;
+    height: calc(100vh - 98px);
+    top: -9000px;
+    z-index: 99;
+    position: absolute;
+    &.active {
+        top: 98px;
+    }
+    & .container-fluid {
+        display: flex;
+    }
     & .column {
+        padding: 40px 0;
+        width: 25%;
+        border-right: 1px solid #BED0E2;
+        &:first-child {
+            & .column-block {
+                padding-left: 50px;
+            }
+        }
+        &:last-child {
+            border-right: none;
+        }
         &-block {
             display: flex;
             flex-direction: column;
-            padding-left: 50px;
+            padding-left: 85px;
+            margin-bottom: 25px;
+            & ul {
+                flex-direction: column;
+                margin-bottom: 12px;
+            }
+            & li {
+                margin-bottom: 12px;
+                @include desktop1680 {
+                    margin-bottom: 10px;
+                    font-size: 15px;
+                }
+            }
+            @include desktop1680 {
+                padding-left: 75px;
+            }
+            @include laptop1200 {
+                padding-left: 65px;
+            }
         }
         &-title {
             font-size: 22px;
@@ -270,13 +319,30 @@
             display: flex;
             align-items: center;
             position: relative;
+            margin-bottom: 15px;
             & img {
                 margin-right: 10px;
                 position: absolute;
-                left: -49px;
+                left: -50px;
                 top: 50%;
                 transform: translateY(-50%);
             }
+            @include desktop1680 {
+                font-size: 18px;
+            }
         }
+        &-subtitle {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        @include laptop1200 {
+            padding: 30px 0;
+        }
+        @include tablets {
+            width: 50%;
+        }
+    }
+    @include big-tablets {
+        display: none;
     }
 }

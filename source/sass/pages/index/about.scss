@@ -5,6 +5,13 @@
     font-size: 18px;
     line-height: 30px;
     text-align: center;
+    @include tablets {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @include big-mobile {
+      margin: 0;
+    }
   }
   &__features {
     margin-top: 60px;
@@ -21,6 +28,11 @@
         font-weight: 400;
         line-height: 53px;
         margin-bottom: 25px;
+        @include tablets {
+          font-size: 48px;
+          line-height: 38px;
+          margin-bottom: 10px;
+        }
       }
       &-name {
         color: $color-primary;
@@ -28,12 +40,44 @@
         font-size: 26px;
         margin: 0;
         margin-bottom: 5px;
+        @include tablets {
+          font-size: 22px;
+        }
       }
       &-sub {
         font-size: 20px;
         font-weight: 400;
         margin: 0;
+        @include tablets {
+          font-size: 16px;
+        }
+      }
+      @include big-mobile {
+        margin-bottom: 25px;
+      }
+      &:last-child {
+        @include big-mobile {
+          margin-bottom: 0;
+        }
       }
     }
+    @include big-tablets {
+      justify-content: space-between;
+    }
+    @include big-mobile {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  }
+  & .s-title {
+    @include big-mobile {
+      margin-bottom: 20px;
+    }
+  }
+  @include tablets {
+    padding-bottom: 60px;
+  }
+  @include big-mobile {
+    padding-bottom: 40px;
   }
 }

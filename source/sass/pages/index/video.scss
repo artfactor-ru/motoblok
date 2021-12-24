@@ -8,6 +8,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include mid-mobile {
+      min-height: 217px;
+    }
   }
   &__play {
     display: flex;
@@ -21,6 +24,9 @@
     cursor: pointer;
     & span {
       margin-bottom: 12px;
+    }
+    @include mid-mobile {
+      font-size: 16px;
     }
   }
 }
