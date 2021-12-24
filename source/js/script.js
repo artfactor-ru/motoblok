@@ -1,7 +1,17 @@
 'use strict';
+import * as menu from './modules/hc-offcanvas-nav';
 
 const $ = require("jquery");
 window.jQuery = $;
+
+document.addEventListener('DOMContentLoaded', function () {
+    let Nav = new hcOffcanvasNav('#mobile-menu', {
+        disableAt: 1025,
+        levelTitles: true,
+        insertClose: true,
+        labelBack: 'Назад'
+    });
+});
 
 let heroSlider = new Swiper(".hero__banner", {
     speed: 600,
@@ -38,14 +48,18 @@ $('.menu-handler-js').on('click', () => {
 })
 
 let prevScrollpos = window.pageYOffset;
-window.addEventListener('scroll', function() {
-    if (pageYOffset > 120) {
-        let currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.querySelector(".header").style.top = "0";
-        } else {
-            document.querySelector(".header").style.top = "-127px";
+if (window.innerWidth <= 1024) {
+    window.addEventListener('scroll', function() {
+        if (pageYOffset > 120) {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.querySelector(".header").style.top = "0";
+            } else {
+                document.querySelector(".header").style.top = "-127px";
+            }
+            prevScrollpos = currentScrollPos;
         }
-        prevScrollpos = currentScrollPos;
-    }
-});
+    });
+}
+
+

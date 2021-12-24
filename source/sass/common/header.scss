@@ -54,7 +54,10 @@
         display: none;
         margin-right: 20px;
         cursor: pointer;
-        & svg {
+        & .hc-nav-trigger {
+            & span {
+                display: none;
+            }
             @include big-tablets {
                 width: 35px;
                 height: 25px;
