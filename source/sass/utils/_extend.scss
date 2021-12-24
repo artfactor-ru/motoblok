@@ -315,8 +315,10 @@ input:checked + .checkbox-style:after {
 		font-size:16px;
 		line-height:18px;
 		position:relative;
-		&.basic-form__privacy {
+		&.basic-form__privacy,
+		&.basic-form__subscribe {
 			background:transparent;
+			border:none;
 			flex-direction:row;
 			padding:0;
 			& .text {
