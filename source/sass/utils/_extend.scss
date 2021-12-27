@@ -84,6 +84,9 @@ ul {
 a {
     color: $color-main;
     text-decoration: none;
+	&.text--red {
+		color:#ec0000;
+	}
 }
 
 select {
@@ -254,7 +257,8 @@ select {
 			gap:15px;
 			&__item {
 				padding-left:40px;
-				& a { font-size:16px;
+				& a {
+					font-size:16px;
 					&.active:before {
 						top:2px;
 						left:-25px;
