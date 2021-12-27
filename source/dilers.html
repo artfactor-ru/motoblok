@@ -27,69 +27,35 @@
                             <div class="filter-item">
                                 <span>Выберите регион</span>
                                 <div class="filter-container">
-                                    <select>
-                                        <option value="len">Ленинградская область</option>
-                                        <option value="msk">Московская область</option>
+                                    <select class="region-choose">
+                                        <option value="all">Все регионы</option>
+                                        <option value="Ленинградская область">Ленинградская область</option>
+                                        <option value="Московская область">Московская область</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="filter-item">
                                 <span>Выберите город</span>
                                 <div class="filter-container">
-                                    <select>
-                                        <option value="spb">Санкт-Петербург</option>
-                                        <option value="msk">Москва</option>
-                                    </select>
+                                    <select class="city-choose"></select>
                                 </div>
 
                             </div>
                         </div>
                         <div class="scroll-wrap">
                             <ul class="dealers__stores-list">
-                                <li class="item">
-                                    <span class="item__city">г. Санкт-Петербург</span>
-                                    <span class="item__name">Магазин «Мототехника нева»</span>
-                                    <p class="item__address">Ул. Политехническая, 13-15,
-                                        ст.м. Площадь Мужества (в 5 минутах)
-                                    </p>
-                                    <div class="item__numbers">
-                                        <a href="tel:88122977711">8 (812) 297-77-11</a>
-                                        <a href="tel:88122971237">8 (812) 297-12-37</a>
-                                    </div>
-                                    <a href="tel:spb-motoblok.ru" class="item__mail">spb-motoblok.ru</a>
-                                </li>
-                                <li class="item">
-                                    <span class="item__city">г. Колпино</span>
-                                    <span class="item__name">Магазин «Электробензоинструмент»</span>
-                                    <p class="item__address">Ул. Ленина, 33</p>
-                                    <div class="item__numbers">
-                                        <a href="tel:88124616066">8 (812) 461-60-66</a>
-                                    </div>
-                                    <a href="tel:kama-instrument.ru" class="item__mail">kama-instrument.ru</a>
-                                </li>
-                                <li class="item">
-                                    <span class="item__city">г. Колпино</span>
-                                    <span class="item__name">Магазин «Инструменты»</span>
-                                    <p class="item__address">Ул. Тверская, 36/9</p>
-                                    <div class="item__numbers">
-                                        <a href="tel:88124616066">8 (812) 461-60-66</a>
-                                    </div>
-                                    <a href="tel:kama-instrument.ru" class="item__mail">kama-instrument.ru</a>
-                                </li>
-                                <li class="item">
-                                    <span class="item__city">г. Пушкин</span>
-                                    <span class="item__name">Магазин «Инструменты»</span>
-                                    <p class="item__address">Ул. Тверская, 36/9</p>
-                                    <div class="item__numbers">
-                                        <a href="tel:88124616066">8 (812) 461-60-66</a>
-                                    </div>
-                                    <a href="tel:kama-instrument.ru" class="item__mail">kama-instrument.ru</a>
-                                </li>
+
                             </ul>
                         </div>
 
                     </div>
-                    <div class="dealers__stores-maps"></div>
+                    <div class="dealers__stores-maps">
+                        <div class="maps-list">
+                            <div data-city="all" class="maps-item">
+                                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A75e2726f8baae1141bcb9d313f1a3f1b984af63af1598f18c4b601c6dea4859b&amp;source=constructor" width="100%" height="720" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
