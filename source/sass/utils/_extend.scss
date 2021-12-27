@@ -86,6 +86,12 @@ a {
     text-decoration: none;
 }
 
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 .p-title {
 	font-size: 62px;
 	font-family: $font-primary;
@@ -117,6 +123,7 @@ a {
     font-size: 13px;
     color: $color-primary;
     border: 1px solid $color-primary;
+	font-family: $font-main;
     text-transform: uppercase;
     padding: 11px 38px;
     width: max-content;
