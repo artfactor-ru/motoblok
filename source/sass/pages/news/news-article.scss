@@ -108,7 +108,11 @@
 	flex-direction:row;
 	position:relative;
 	margin-bottom:40px;
-	
+
+	@include small-mobile {
+		flex-direction:column;
+	}
+		
 	& a {
 		display:block;
 		position:absolute;
@@ -119,31 +123,68 @@
 
 	}
 	&-img {
-		width:427px;
 		position:relative;
-		&.video-icon:after {
-			content:'';
-			position:absolute;
-			left:0;
-			top:0;
-			width:100%;
-			height:100%;
-			background:url(../img/video.png) center center no-repeat;
+
+		& img {
+			width:427px;
+			display:block;
+			
+			@include tablets {
+				width:205px;
+			}
+			@include small-mobile {
+				width:315px;
+			}
+		}
+
+		& .video-icon {
+			position:relative;
+			&:after {
+				content:'';
+				position:absolute;
+				left:0;
+				top:0;
+				width:100%;
+				height:100%;
+				background:url(../img/video.png) center center no-repeat;
+				background-color:rgba(0,0,0,.2);
+			}
 		}
 	}
 	&-text {
 		margin-left:40px;
+		
+		@include small-mobile {
+			margin-left:0;
+		}
 	}
 	&-date {}
 	&-title {
 		font-size:26px;
 		line-height:30px;
 		margin:10px 0 20px;
+
+		@include tablets {
+			font-size:20px;
+			line-height:26px;
+		}
+		@include small-mobile {
+			font-size:18px;
+			line-height:22px;
+		}
 	}
 	&-abstract {
 		font-size:18px;
 		line-height:30px;
 		margin-bottom:20px;
+		@include tablets {
+			font-size:16px;
+			line-height:24px;
+		}
+		@include small-mobile {
+			font-size:16px;
+			line-height:24px;
+		}
 	}
 	&-viewed {
 		position:relative;
