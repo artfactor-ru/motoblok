@@ -29,6 +29,16 @@
 		display:flex;
 		flex-direction:row;
 		margin-bottom:40px;
+		
+		@include big-tablets {
+			flex-wrap:wrap;
+		}
+		@include tablets {
+			flex-wrap:wrap;
+		}
+		@include old-small-mobile {
+			flex-wrap:wrap;
+		}
 	}
 	&__text {
 		font-size:18px;
@@ -41,6 +51,23 @@
 		display:flex;
 		flex-direction:column;
 		margin-left:60px;
+		
+		@include big-tablets {
+			flex-direction:row;
+			gap:20px;
+			margin-left:0;
+		}
+		@include tablets {
+			flex-direction:column;
+			gap:20px;
+			margin-left:0;
+		}
+		@include old-small-mobile {
+			flex-direction:column;
+			gap:20px;
+			margin-left:0;
+		}
+		
 		&-img {
 			margin-bottom:40px;
 		}
