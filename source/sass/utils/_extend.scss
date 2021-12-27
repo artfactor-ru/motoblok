@@ -16,7 +16,7 @@ body {
 	@include big-tablets {
 		padding-top: 127px;
 	}
-	@include tablets {
+	@include big-mobile {
 		padding-top: 111px;
 	}
 	@include old-small-mobile {
@@ -97,6 +97,14 @@ select {
 	font-family: $font-primary;
 	font-weight: 400;
 	margin:30px 0;
+	@include tablets {
+		font-size: 36px;
+		margin: 15px 0;
+	}
+	@include big-mobile {
+		font-size: 30px;
+	}
+
 }
 
 .s-title {
@@ -117,6 +125,12 @@ select {
 	font-family: $font-primary;
 	font-weight: 400;
 	margin:0 0 15px 0;
+	@include tablets {
+		font-size: 30px;
+	}
+	@include big-mobile {
+		font-size: 26px;
+	}
 }
 
 .button {
