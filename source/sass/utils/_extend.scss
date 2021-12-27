@@ -200,17 +200,13 @@ select {
 
 .subsection-list {
 	margin-bottom:40px;
-	& ul {
+	& > ul {
 		display:flex;
 		flex-direction:row;
+		gap:45px;
+		position:relative;
 	}
-	& li {
-		margin-right:45px;
-		&:last-child {
-			margin-right:0;
-		}
-	}
-	& a {
+	& > ul > li > a {
 		color:#848484;
 		font-size:18px;
 		line-height:24px;
@@ -225,6 +221,32 @@ select {
 				bottom:-8px;
 				width:100%;
 				border-bottom:2px dashed $color-main;
+			}
+		}
+		&.active + .aside-list__mobile {
+			display:block;
+		}
+	}
+	& .aside-list__mobile {
+		display:none;
+		position:absolute;
+		top:100%;
+		bottom:0;
+		width:100%;
+		height:100%;
+		& .aside-list {
+			padding:25px 0;
+			background:#eaeaea;
+			gap:15px;
+			&__item {
+				padding-left:40px;
+				& a { font-size:16px;
+					&.active:before {
+						top:2px;
+						left:-25px;
+						transform:rotate(0);
+					}
+				}
 			}
 		}
 	}
@@ -291,6 +313,7 @@ input:checked + .checkbox-style:after {
 .basic-form {
 	& label {
 		background:#fff;
+		border:1px solid #bdbdbd;
 		padding:7px 17px;
 		margin-bottom:16px;
 		flex-direction:column;
@@ -299,8 +322,10 @@ input:checked + .checkbox-style:after {
 		font-size:16px;
 		line-height:18px;
 		position:relative;
-		&.basic-form__privacy {
+		&.basic-form__privacy,
+		&.basic-form__subscribe {
 			background:transparent;
+			border:none;
 			flex-direction:row;
 			padding:0;
 			& .text {
@@ -312,6 +337,7 @@ input:checked + .checkbox-style:after {
 			background:url(../img/paperclip_red.svg) 0 7px no-repeat transparent;
 			padding-left:40px;
 			font-size:18px;
+			border:none;
 			& .text {
 				color:#ec0000;
 				line-height:26px;
@@ -321,6 +347,7 @@ input:checked + .checkbox-style:after {
 					display:inline-block;
 					position:relative;
 					background-color:#fff;
+					border:1px solid #bdbdbd;
 					padding:8px 35px 8px 10px;
 					margin-right:10px;
 					&:after {
@@ -350,10 +377,21 @@ input:checked + .checkbox-style:after {
 			width:0;
 			height:0;
 		}
+		& textarea {
+			border:none;
+			outline:none;
+			min-height:120px;
+			resize:vertical;
+		}
 	}
 	&__buttons {
 		display:flex;
 		flex-direction:row;
+		justify-content:space-between;
+		
+		& label {
+			border:none;
+		}
 		& .button {
 			padding:20px 40px;
 			white-space:nowrap;
@@ -405,6 +443,32 @@ input:checked + .checkbox-style:after {
 .accordion__item-title.active + .accordion__item-text {
 	display:block;
 	height:auto;
+}
+
+.aside-list {
+	flex-direction:column;
+	gap:30px;
+	&__item {
+		padding-left:90px;
+		& a {
+			font-size:18px;
+			line-height:30px;
+			position:relative;
+			&.active {
+				color:#ec0000;
+				&:before {
+					content:'';
+					position:absolute;
+					left:-40px;
+					top:4px;
+					width:10px;
+					height:14px;
+					background:url(../img/list-arrow.png) 0 0 no-repeat;
+					transform:rotate(180deg);
+				}
+			}
+		}
+	}
 }
 
 .map_placeholder { margin:40px 0 60px; }
