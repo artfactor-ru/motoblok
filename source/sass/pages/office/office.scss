@@ -1,0 +1,46 @@
+.office {
+	&__list {
+		flex-direction:column;
+		&-item {
+			display:flex;
+			flex-direction:row;
+			gap:26px;
+			border-top:1px solid #d4d4d4;
+			&-img {
+				margin-top:1em;
+			}
+			&-name {
+				width:40%;
+				& p {
+					font-size:18px;
+					line-height:30px;
+					font-family:$font-main;
+					color:$color-main;
+				}
+				& h3 {
+					font-size:26px;
+					line-height:32px;
+					font-weight:600;
+					font-family:$font-main;
+					color:$color-main;
+					margin:0;
+				}
+			}
+			&-contacts {
+				width:50%;
+				& p {
+					font-size:18px;
+					line-height:30px;
+					font-family:$font-main;
+					color:$color-main;
+				}
+			}
+		}
+	}
+	&__buttons {
+		margin-top:40px;
+		& .button {
+			display:inline-block;
+		}
+	}
+}

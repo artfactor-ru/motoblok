@@ -1,0 +1,22 @@
+.warranty {
+	&__attention {
+		display:flex;
+		flex-direction:column;
+		padding-bottom:60px;
+		&-item {
+			line-height:30px;
+			padding-left:25px;
+			background:url(../img/list-arrow.png) left center no-repeat;
+		}
+	}
+	&-form {
+		padding-top:60px;
+		&__form {
+			& .basic-form {
+				display:grid;
+				grid-template-columns:1fr 1fr;
+				gap:16px;
+			}
+		}
+	}
+}

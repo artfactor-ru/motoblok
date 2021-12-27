@@ -111,13 +111,3 @@
 		padding-bottom:60px;
 	}
 }
-.warranty-form {
-	&__form {
-		padding-bottom:60px;
-		& .basic-form {
-			display:grid;
-			grid-template-columns:1fr 1fr;
-			gap:16px;
-		}
-	}
-}
