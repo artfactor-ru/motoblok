@@ -10,7 +10,16 @@
                 border-bottom: 1px solid #BED0E2;
                 height: 63px;
                 display: flex;
+                transition: .3s;
+                &:hover a {
+                    color: $color-primary;
+                }
+                &:hover {
+                    background-color: #fff;
+                    border-bottom: 1px solid $color-primary;
+                }
                 & a {
+                    transition: .3s;
                     padding: 10px 0 10px 60px;
                     display: flex;
                     align-items: center;
@@ -54,6 +63,7 @@
         display: flex;
         align-items: center;
         &-inner {
+            position: absolute;
             width: 50%;
             color: #fff;
             display: flex;
@@ -138,6 +148,10 @@
             @include small-mobile {
                 width: 90%;
             }
+        }
+        & video {
+            position: absolute;
+            object-fit: cover;
         }
     }
     &__pagination {

@@ -24,6 +24,11 @@
       &-pic {
         height: 305px;
         position: relative;
+        overflow: hidden;
+        & video {
+          width: 100%;
+          object-fit: cover;
+        }
         & .sale-sticker {
           font-size: 14px;
           background-color: $color-primary;
