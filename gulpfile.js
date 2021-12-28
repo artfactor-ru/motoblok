@@ -202,7 +202,7 @@ gulp.task("server", function() {
     gulp.watch("./source/sass/**/*.{sass,scss}", { usePolling: true }, gulp.series("css"));
     gulp.watch("./source/components/**", gulp.series("html")).on("change", browserSync.reload);
     gulp.watch("./source/*.html", gulp.series("html")).on("change", browserSync.reload);
-    // gulp.watch("./source/video/**/**", gulp.series("copy")).on("change", browserSync.reload);
+    gulp.watch("./source/video/**/**", gulp.series("copy")).on("change", browserSync.reload);
 });
 
 gulp.task("start", gulp.series("build", "server"));

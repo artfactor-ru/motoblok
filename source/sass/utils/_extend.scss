@@ -145,14 +145,26 @@ select {
     padding: 11px 38px;
     width: max-content;
 	cursor:pointer;
+	transition: .3s;
+	&:hover {
+		background-color: $color-primary;
+		color: #fff;
+	}
     &--light {
         color: #fff;
         border: 1px solid #fff;
+		&:hover {
+			background-color: #fff;
+			color: $color-main;
+		}
     }
     &--blue {
         color: #fff;
         border: 1px solid #1539A3;
 		background-color:#1539A3;
+		&:hover {
+			background-color: #093E78;
+		}
     }
 }
 
