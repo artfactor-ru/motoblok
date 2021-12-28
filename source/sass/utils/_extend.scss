@@ -97,9 +97,20 @@ select {
 
 .p-title {
 	font-size: 62px;
+	line-height:70px;
 	font-family: $font-primary;
 	font-weight: 400;
 	margin:30px 0;
+	@include tablets {
+		font-size:36px;
+		line-height:44px;
+		margin:25px 0;
+	}
+	@include small-mobile {
+		font-size:30px;
+		line-height:32px;
+		margin:25px 0 15px;
+	}
 }
 
 .s-title {

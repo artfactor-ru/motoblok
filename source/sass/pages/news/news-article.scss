@@ -1,7 +1,4 @@
 .article-page {
-	& .p-title {
-		line-height:70px;
-	}
 	& .s-title {
 		text-align:left;
 	}
@@ -18,7 +15,7 @@
 		@include tablets {
 			width:100%;
 		}
-		@include old-small-mobile {
+		@include small-mobile {
 			width:100%;
 		}
 
@@ -32,7 +29,7 @@
 		@include tablets {
 			display:none;
 		}
-		@include old-small-mobile {
+		@include small-mobile {
 			display:none;
 		}
 		& li {
