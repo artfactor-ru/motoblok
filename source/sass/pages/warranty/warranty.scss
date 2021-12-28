@@ -7,6 +7,13 @@
 			line-height:30px;
 			padding-left:25px;
 			background:url(../img/list-arrow.png) left center no-repeat;
+			
+			@include tablets {
+				background-position: left 5px;
+			}
+			@include small-mobile {
+				background-position: left 5px;
+			}
 		}
 	}
 	&-form {
@@ -22,6 +29,10 @@
 				display:grid;
 				grid-template-columns:1fr 1fr;
 				gap:16px;
+				
+				@include small-mobile {
+					grid-template-columns:1fr;
+				}
 			}
 		}
 	}

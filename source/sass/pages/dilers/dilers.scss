@@ -22,7 +22,11 @@ section {
       display: flex;
     }
     &-content {
-      width: 50%;
+		width: 50%;
+		
+		@include small-mobile {
+			width: 100%;
+		}
       position: relative;
       &:after {
         position: absolute;
@@ -41,10 +45,26 @@ section {
         overflow: auto;
       }
     }
+	&-maps {
+
+		@include small-mobile {
+			display:none;
+		}
+	}
     &-filters {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0 20px;
+	  
+		@include tablets {
+			grid-template-columns:1fr;
+			gap:20px;
+		}
+		@include small-mobile {
+			grid-template-columns:1fr;
+			gap:20px;
+		}
+
       & .filter-item {
         display: flex;
         flex-direction: column;

@@ -428,6 +428,14 @@ input:checked + .checkbox-style:after {
 			background:#eaeaea;
 			padding:25px 100px 25px 30px;
 			position:relative;
+			
+			@include tablets {
+				height:auto;
+			}
+			@include small-mobile {
+				height:auto;
+			}
+			
 			& .arrow {
 				position:absolute;
 				top:16px;

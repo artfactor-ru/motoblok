@@ -4,9 +4,24 @@
 		display:flex;
 		flex-direction:row;
 		gap:70px;
+
+		@include big-tablets {
+			flex-direction:column;
+			gap:0;
+		}
+		@include tablets {
+			flex-direction:column;
+			gap:0;
+		}
+		@include small-mobile {
+			flex-direction:column;
+			gap:0;
+		}
+			
 		& .right-side {
 			padding-top:260px;
 			background:#eaeaea;
+
 			&:before {
 				content:'';
 				position:absolute;
@@ -17,9 +32,29 @@
 				background:#eaeaea;
 				z-index:-1;
 			}
+			
+			@include big-tablets {
+				display:none;
+			}
+			@include tablets {
+				display:none;
+			}
+			@include small-mobile {
+				display:none;
+			}
 		}
 		& .left-side {
 			max-width:820px;
+			
+			@include big-tablets {
+				max-width:100%;
+			}
+			@include tablets {
+				max-width:100%;
+			}
+			@include small-mobile {
+				max-width:100%;
+			}
 		}
 	}
 	&__container {
@@ -27,14 +62,11 @@
 		flex-direction:row;
 		margin-bottom:40px;
 		
-		@include big-tablets {
-			flex-wrap:wrap;
-		}
 		@include tablets {
-			flex-wrap:wrap;
+			flex-direction:column;
 		}
 		@include small-mobile {
-			flex-wrap:wrap;
+			flex-direction:column;
 		}
 	}
 	&__text {
@@ -118,6 +150,7 @@
 				height:680px;
 			}
 			@include small-mobile {
+				width:100%;
 				height:auto;
 			}
 			
@@ -195,9 +228,18 @@
 			flex-direction:row;
 			font-size:18px;
 			line-height:30px;
+			
+			@include small-mobile {
+				flex-direction:column;
+			}
+				
 			& span {
 				color:#848484;
 				width:30%;
+				
+				@include small-mobile {
+					width:100%;
+				}
 			}
 			& p {
 				margin-top:0;
