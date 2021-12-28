@@ -1,5 +1,6 @@
 'use strict';
 import * as menu from './modules/hc-offcanvas-nav';
+import * as map from './modules/dealers-map';
 
 const $ = require("jquery");
 window.jQuery = $;

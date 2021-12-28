@@ -1,4 +1,5 @@
 .products__grid {
+
   height: 505px;
   display: flex;
   & .block {
@@ -90,4 +91,8 @@
   @include tablets {
     margin-bottom: 35px;
   }
+}
+
+.products {
+  padding-top: 100px;
 }

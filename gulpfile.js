@@ -87,26 +87,26 @@ gulp.task("minifyjs", function() {
 });
 
 // Оптимизация изображений
-gulp.task("image", function() {
-    return gulp.src("./build/img/**/*.{png,jpg,svg}")
-        // .pipe(imagemin([
-        //     imagemin.optipng({
-        //         optimizationLevel: 3 // уровень оптимизации
-        //     }),
-        //     imagemin.jpegtran({
-        //         progressive: true // прогрессивная загрузка картинки
-        //     }),
-        //     // imagemin.svgo({
-        //     //     plugins: [
-        //     //         { cleanupIDs: false },
-        //     //         { removeUselessDefs: false },
-        //     //         { removeViewBox: true },
-        //     //         { removeComments: true }
-        //     //     ]
-        //     // })
-        // ]))
-        .pipe(gulp.dest("./build/img"));
-});
+// gulp.task("image", function() {
+//     return gulp.src("./build/img/**/*.{png,jpg,svg}")
+//         // .pipe(imagemin([
+//         //     imagemin.optipng({
+//         //         optimizationLevel: 3 // уровень оптимизации
+//         //     }),
+//         //     imagemin.jpegtran({
+//         //         progressive: true // прогрессивная загрузка картинки
+//         //     }),
+//         //     // imagemin.svgo({
+//         //     //     plugins: [
+//         //     //         { cleanupIDs: false },
+//         //     //         { removeUselessDefs: false },
+//         //     //         { removeViewBox: true },
+//         //     //         { removeComments: true }
+//         //     //     ]
+//         //     // })
+//         // ]))
+//         .pipe(gulp.dest("./build/img"));
+// });
 
 // Оптимизация webp
 // gulp.task("webp", function () {
@@ -118,14 +118,14 @@ gulp.task("image", function() {
 // });
 
 // svg спрайт
-gulp.task("sprite", function() {
-    return gulp.src("./source/img/**/icon-*.svg")
-        .pipe(svgstore({
-            inlineSvg: true
-        }))
-        .pipe(rename("sprite.svg"))
-        .pipe(gulp.dest("./build/img"));
-});
+// gulp.task("sprite", function() {
+//     return gulp.src("./source/img/**/icon-*.svg")
+//         .pipe(svgstore({
+//             inlineSvg: true
+//         }))
+//         .pipe(rename("sprite.svg"))
+//         .pipe(gulp.dest("./build/img"));
+// });
 
 
 // gulp.task("sprite2", function() {
@@ -169,10 +169,10 @@ gulp.task("clean", function() {
 gulp.task("build", gulp.series(
     "clean", // удаляем папку build
     "copy", // копируем необходимые файлы в папку build
-    "sprite", // создаем svg спрайт
+    // "sprite", // создаем svg спрайт
     // "sprite2",
     // "sprite3",
-    "image", // оптимизируем изображения
+    // "image", // оптимизируем изображения
     // "webp",   // конвертируем в webp
 
     "css", // собираем css
@@ -202,7 +202,7 @@ gulp.task("server", function() {
     gulp.watch("./source/sass/**/*.{sass,scss}", { usePolling: true }, gulp.series("css"));
     gulp.watch("./source/components/**", gulp.series("html")).on("change", browserSync.reload);
     gulp.watch("./source/*.html", gulp.series("html")).on("change", browserSync.reload);
-    // gulp.watch("./source/video/**/**", gulp.series("copy")).on("change", browserSync.reload);
+    gulp.watch("./source/video/**/**", gulp.series("copy")).on("change", browserSync.reload);
 });
 
 gulp.task("start", gulp.series("build", "server"));
