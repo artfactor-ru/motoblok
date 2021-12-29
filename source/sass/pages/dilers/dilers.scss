@@ -1,8 +1,5 @@
-section.dealers {
+section {
   padding-bottom: 115px;
-  @include big-mobile {
-    padding-bottom: 50px;
-  }
 }
 
 .dealers {
@@ -11,10 +8,6 @@ section.dealers {
     & p {
       font-size: 18px;
       line-height: 30px;
-      @include big-mobile {
-        font-size: 16px;
-        line-height: 26px;
-      }
     }
     & a {
       color: $color-primary;
@@ -27,41 +20,14 @@ section.dealers {
     }
     &-container {
       display: flex;
-
-      @include big-tablets {
-        flex-direction: column;
-      }
-    }
-    &-maps {
-      width: 50%;
-      @include big-tablets {
-        width: 100%;
-        padding-top: 20px;
-      }
-      & .maps-list {
-        height: 756px;
-        padding-left: 20px;
-        @include big-tablets {
-          height: 400px;
-          padding-left: 0;
-        }
-        & iframe {
-          height: 756px;
-          @include laptop1200 {
-            height: 830px;
-          }
-          @include big-tablets {
-            height: 400px;
-          }
-        }
-      }
     }
     &-content {
-      width: 50%;
+		width: 50%;
+		
+		@include small-mobile {
+			width: 100%;
+		}
       position: relative;
-      @include big-tablets {
-        width: 100%;
-      }
       &:after {
         position: absolute;
         display: block;
@@ -75,63 +41,47 @@ section.dealers {
         opacity: 0.6;
       }
       & .scroll-wrap {
-        max-height: 650px;
+        max-height: 860px;
         overflow: auto;
-        margin-top: 20px;
-        @include big-tablets {
-          max-height: 485px;
-        }
-        &::-webkit-scrollbar { /* 1 - скроллбар */
-          width: 16px;
-          height: 4px;
-          background-color: #FFFFFF;
-          border: 1px solid #d4d4d4;
-          border-radius: 16px;
-          @include big-mobile {
-            width: 10px;
-          }
-        }
-        &::-webkit-scrollbar-button { /* 2 - кнопка */}
-        &::-webkit-scrollbar-track { /* 3 - трек */}
-        &::-webkit-scrollbar-track-piece { /* 4 - видимая часть трека */}
-        &::-webkit-scrollbar-thumb { /* 5 - ползунок */
-          border-radius: 16px;
-          background-color: #E0E0E0;
-        }
-        &::-webkit-scrollbar-corner { /* 6 - уголок */}
-        &::-webkit-resizer { /* 7 - изменение размеров */}
       }
     }
+	&-maps {
+
+		@include small-mobile {
+			display:none;
+		}
+	}
     &-filters {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0 20px;
-      @include laptop1200 {
-        grid-template-columns: 1fr;
-        gap: 15px 0;
-      }
+	  
+		@include tablets {
+			grid-template-columns:1fr;
+			gap:20px;
+		}
+		@include small-mobile {
+			grid-template-columns:1fr;
+			gap:20px;
+		}
+
       & .filter-item {
         display: flex;
         flex-direction: column;
         & span {
           display: block;
           margin-bottom: 5px;
-          @include big-mobile {
-            font-size: 15px;
-          }
         }
         & .filter-container {
           border: 1px solid #D8D8D8;
           position: relative;
           &:after {
             position: absolute;
+
             content: url("../../../img/down-arrow.svg");
             top: 50%;
             right: 22px;
             transform: translateY(-50%);
-            @include desktop1680 {
-              right: 12px;
-            }
           }
           & select {
             padding: 20px;
@@ -140,17 +90,6 @@ section.dealers {
             width: 100%;
             font-family: $font-main;
             font-size: 18px;
-            @include desktop1680 {
-              font-size: 16px;
-            }
-            @include laptop1200 {
-              padding: 14px;
-              font-size: 18px;
-            }
-            @include big-mobile {
-              padding: 10px;
-              font-size: 16px;
-            }
           }
         }
       }
@@ -164,33 +103,17 @@ section.dealers {
         padding: 30px 0;
         border-bottom: 1px solid #D4D4D4;
         font-size: 18px;
-        @include laptop1200 {
-          padding: 20px 0;
-        }
-        @include big-mobile {
-          font-size: 16px;
-        }
         &__city {
           font-size: 18px;
           font-weight: 600;
           display: block;
           margin-bottom: 10px;
-          @include big-mobile {
-            font-size: 16px;
-          }
         }
         &__name {
           font-size: 26px;
           margin-bottom: 20px;
           display: block;
           font-weight: 600;
-          @include laptop1200 {
-            font-size: 22px;
-            margin-bottom: 0;
-          }
-          @include big-mobile {
-            font-size: 18px;
-          }
         }
         &__numbers {
           display: flex;
@@ -201,4 +124,3 @@ section.dealers {
     }
   }
 }
-

@@ -16,7 +16,7 @@ body {
 	@include big-tablets {
 		padding-top: 127px;
 	}
-	@include big-mobile {
+	@include tablets {
 		padding-top: 111px;
 	}
 	@include old-small-mobile {
@@ -97,17 +97,20 @@ select {
 
 .p-title {
 	font-size: 62px;
+	line-height:70px;
 	font-family: $font-primary;
 	font-weight: 400;
 	margin:30px 0;
 	@include tablets {
-		font-size: 36px;
-		margin: 15px 0;
+		font-size:36px;
+		line-height:44px;
+		margin:25px 0;
 	}
-	@include big-mobile {
-		font-size: 30px;
+	@include small-mobile {
+		font-size:30px;
+		line-height:32px;
+		margin:25px 0 15px;
 	}
-
 }
 
 .s-title {
@@ -128,12 +131,6 @@ select {
 	font-family: $font-primary;
 	font-weight: 400;
 	margin:0 0 15px 0;
-	@include tablets {
-		font-size: 30px;
-	}
-	@include big-mobile {
-		font-size: 26px;
-	}
 }
 
 .button {
@@ -145,26 +142,14 @@ select {
     padding: 11px 38px;
     width: max-content;
 	cursor:pointer;
-	transition: .3s;
-	&:hover {
-		background-color: $color-primary;
-		color: #fff;
-	}
     &--light {
         color: #fff;
         border: 1px solid #fff;
-		&:hover {
-			background-color: #fff;
-			color: $color-main;
-		}
     }
     &--blue {
         color: #fff;
         border: 1px solid #1539A3;
 		background-color:#1539A3;
-		&:hover {
-			background-color: #093E78;
-		}
     }
 }
 
@@ -443,6 +428,14 @@ input:checked + .checkbox-style:after {
 			background:#eaeaea;
 			padding:25px 100px 25px 30px;
 			position:relative;
+			
+			@include tablets {
+				height:auto;
+			}
+			@include small-mobile {
+				height:auto;
+			}
+			
 			& .arrow {
 				position:absolute;
 				top:16px;
